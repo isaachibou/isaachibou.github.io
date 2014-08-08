@@ -1,0 +1,105 @@
+/* Responsive Media Requests */
+
+/*  Basics */
+html,body {  background: #1a1a1a; padding : 0; margin: 0; width: 100vw; min-width: 320px; max-width: 100vw; min-height: 700px; height: 100vh; position: relative; min-font-size: 150px; }
+
+/* Generalities */
+h1 { display:inline-block; font-family: 'Oswald',sans-serif,Serif; font-weight: bold; letter-spacing: -2px; border: none; color: #336699; width: auto; }
+h2 {  font-family: 'Nixie One', sans-serif, Serif; font-weight: bold; color: lightblue; }
+h3 {   font-family: 'Cinzel','Nixie One', Serif; }
+h4 {  font-family: 'Oswald','Nixie One', Serif; }
+.hidden { display: none; }
+
+
+/* Header */
+nav { display: inline-block; /*background: #1a1a1a; opacity: 0.8;*/text-align: left; min-width: 280px; width: 15%; height: 60px; position: fixed; z-index: 9999; }
+nav ul { list-style-type: none; }
+nav li { display: inline-block; margin-right: 30px; width: auto;}
+nav a { font-size: 2.5em; color: white;text-decoration: none;  font-family: 'Oswald', Serif; }
+._dashed { border-bottom: 1px dotted #999; padding-bottom: 2px;  }
+nav a:hover { color: #336699; text-decoration: none;}
+
+#nav_trigger { display: block; cursor: pointer; position: absolute; top: 0; left:0; z-index: 2; background-color: #336699; height: 60px; width: 60px; border: none;
+
+ 	-webkit-transition: height 1s ease-in-out;
+	-moz-transition: height 1s ease-in-out;
+	-o-transition: height 1s ease-in-out;
+	transition: height 1s ease-in-out;
+}
+
+#menu { position: absolute; top: 18px; left: 18px; margin: 0; padding: 0;
+	-webkit-transition: all .3s ease-in-out;
+	-moz-transition: all .3s ease-in-out;
+	-o-transition: all .3s ease-in-out;
+	transition: all .3s ease-in-out;
+}
+
+.RightAngle {
+	-webkit-transform:rotate(90deg);	/* Chrome, Safari */
+	-moz-transform:rotate(90deg);  		/* Firefox */
+	-o-transform:rotate(90deg); 		/* Opera */
+	transform:rotate(90deg); 			/*Standard */
+}
+
+#navmenu { padding: 0; margin: 0; height:60px; }
+#dropdown { padding: 0; margin:0; height: 100%; }
+#dropdown li { padding: 0; margin-left: 60px; width: calc(100% - 60px); height: 100%; background: rgba(26,26,26,0.8);}
+#dropdown a { margin: 0 0 0 10%; }
+.eph { margin-top: 10%; visibility: hidden; opacity: 0;
+	-webkit-transition: all 1s ease-out .2s;
+	-moz-transition: all 1s ease-out .2s;
+	-o-transition: all 1s ease-out .2s;
+	transition: all 1s ease-out .2s;
+
+}
+.eph:hover {margin-left:80px!important;
+	-webkit-transition: margin-left 1s ease-out;
+	-moz-transition: margin-left 1s ease-out;
+	-o-transition: margin-left 1s ease-out;
+	transition: margin-left 1s ease-out;
+} 
+
+/* Main Content */
+.over { margin: 0; padding: 0; position: absolute; background: rgba(26,26,26,0.6); }
+.over h1 { font-size: 4em; font-family: 'Oswald',sans-serif,Serif; font-weight: bold; color: black; white-space: nowrap; width: auto; color: #336699;}
+.title {   font-size: 5vmin;  color : #336699; }
+
+/* Back */
+#HeroBack { position: relative; padding: 0; margin: 0; width: 100%; height: 100vh; background: #1a1a1a url("../images/jpg/MM&I/Hero/Back.jpg") no-repeat fixed; background-size: cover; }
+#OverBack { display: inline; height:50%; width: 0%; bottom: 25%; 
+			-webkit-transition: width 1s linear;
+			-moz-transition: width 1s linear;
+			-o-transition: width 1s linear;
+			transition: width 1s linear;
+} 
+#OverBack h3 { color: lightgrey; }
+
+#name { margin: 2% 0 0 10%; padding: 0; border: none; font-size: 9vw; white-space: nowrap; }
+#intro { margin: 0% 0 0 10%; white-space: nowrap; font-size: 3.7vw; }
+#title { margin: 3% 0 0 10.5%; white-space: nowrap; font-size: 3.5vw; border-top: 1px solid; border-top: 2px solid #808080; padding-top: 29px; }
+
+
+
+/* About */
+#HeroProfil {  padding: 0; margin: 0; width: 100vw; height: 100vh; background: #1a1a1a url("../images/jpg/MM&I/Hero/ProfilSoleilBois.jpg") no-repeat fixed; background-size: cover; }
+#OverProfil { background: rgba(26,26,26,0.8); padding: 0; margin: 0; height: 100%; width: 50%; right: 0px; background: rgba(26,26,26,0.8); -webkit-filter: blur(15px); -moz-filter: blur(15px); -o-filter: blur(15px);	filter: blur(15px); }
+#OverBlur {  padding: 5% 5%; margin: 0; position: absolute; left: 50%; height:100%; width:50%; }
+#OverBlur h1 { font-size : 7.5vw; margin: 0; white-space: nowrap;}
+#OverBlur h2 { font-size: 2.9vw;  margin: 0; white-space: nowrap; }
+#OverBlur h4 { margin: 8% 0 0 0; }
+#OverBlur p { font-family: "Nixie One"; font-size: 1.7em;  color: white;}
+
+
+/* Menu */
+
+/* Resume */
+
+/* Projects */
+
+/* Stuff */
+
+
+
+
+
+ 
