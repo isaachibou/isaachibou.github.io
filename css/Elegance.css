@@ -1,8 +1,29 @@
+/*  Basics */
+html { font-size: 17px; }
+html,body { background: #1a1a1a; padding : 0; margin: 0; width: 100vw; min-width: 320px; min-height: 700px; height: 100vh; position: relative; overflow-x: hidden; }
+
 /* Responsive Media Requests */
 
-/*  Basics */
-html,body {  font-size: 17px; background: #1a1a1a; padding : 0; margin: 0; width: 100vw; min-width: 320px; min-height: 700px; height: 100vh; position: relative; overflow-x: hidden;}
+	/* Large Desktops */
+	@media screen and ( max-width: 1680px ) {
+		html { font-size: 16px; }
+	}
 
+	/* UltraBooks & Tablets */
+	@media screen and ( max-width: 1366px ) {
+		html { font-size: 13px; }
+	}
+
+	/* Small Desktops & NetBooks */
+	@media screen and ( max-width: 1280px ) {
+		html { font-size: 12px; }
+	}
+
+	/* Ipads */
+	@media screen and ( max-width: 1024px ) {
+		html { font-size: 10px; }
+	}
+ 
 /* Generalities */
 h1 { font-family: 'Oswald',sans-serif,Serif; font-weight: bold; letter-spacing: -2px; border: none; color: #336699; width: auto; display:inline-block; }
 h2 { font-family: 'Nixie One', sans-serif, Serif; font-weight: bold; color: lightblue; }
@@ -30,7 +51,7 @@ nav a:hover { color: #336699; text-decoration: none;}
 #navmenu { padding: 0; margin: 0; height:60px;   }
 #dropdown { padding: 0; margin:0; height: 100%; }
 #dropdown li { padding: 0; margin-left: 60px; width: calc(100% - 60px); height: 100%; background: rgba(26,26,26,0.8);}
-#dropdown a { margin: 0 0 0 10%; font-size: 2em; font-size: 2rem;}
+#dropdown a { margin: 0 0 0 10%; font-size: 2em; font-size: 2rem; font-size: 34px;}
 .eph { margin-top: 10%; visibility: hidden; opacity: 0; 
 	   -webkit-transition: all 1s ease-out .2s; -moz-transition: all 1s ease-out .2s; -o-transition: all 1s ease-out .2s; transition: all 1s ease-out .2s; }
 
@@ -45,7 +66,7 @@ nav a:hover { color: #336699; text-decoration: none;}
 
 /* Back */
 #HeroBack { position: relative; padding: 0; margin: 0; width: 100vw; max-width: 100%; height: 100vh; background: #1a1a1a url("../images/jpg/MM&I/Hero/Back.jpg") center 0 no-repeat fixed; background-size: cover; }
-#OverBack { display: inline; height: max(50%, 350px); width: 0%; bottom: 25%; 
+#OverBack { display: inline; height: 50%; width: 0%; bottom: 25%; 
 			-webkit-transition: width 1s linear; -moz-transition: width 1s linear; -o-transition: width 1s linear; transition: width 1s linear; } 
 #OverBack h3 { color: lightgrey; }
 
@@ -57,7 +78,8 @@ nav a:hover { color: #336699; text-decoration: none;}
 
 /* About */
 #HeroProfil { position: relative; position: relative; padding: 0; margin: 0; width: 100vw; max-width: 100%; height: 100vh; background: #1a1a1a url("../images/jpg/MM&I/Hero/ProfilSoleilBois.jpg") center 0 no-repeat fixed; background-size: cover; }
-#OverProfil { background: rgba(26,26,26,0.8); padding: 0; margin: 0; height: 100%; width: 50%; right: 0px; background: rgba(26,26,26,0.8); -webkit-filter: blur(15px); -moz-filter: blur(15px); -o-filter: blur(15px);	filter: blur(15px); }
+#OverProfil { background: rgba(26,26,26,0.8); padding: 0; margin: 0; height: 100%; width: 50%; right: 0px; background: rgba(26,26,26,0.82);
+			 -webkit-filter: blur(15px); -moz-filter: blur(15px); -o-filter: blur(15px);	filter: blur(15px); }
 #OverBlur {  padding: 5% 5%; margin: 0; position: absolute; left: 50%; height:100%; width:50%; overflow: hidden;}
 #OverBlur h1 { margin: 0; white-space: nowrap; font-size: 7.5vw; font-size: 8.1rem; }
 #OverBlur h2 { margin: 0; white-space: nowrap; font-size: 2.9vw; font-size: 3.15rem;}
