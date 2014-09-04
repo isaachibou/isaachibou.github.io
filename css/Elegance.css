@@ -92,7 +92,7 @@ nav a:hover { color: #336699; text-decoration: none;}
 #HeroTimeline { position: relative; padding: 0; margin: 0; width: 100vw; max-width: 100%; height: 100vh; background: #1a1a1a; background-size: cover; }
 #XP { position: absolute; top: 5%; right: 3%; color: white; font-size: 5rem; }
 
-	/* WORKING FINE 
+	
 	#Pad { position: absolute; padding: 0; margin: 0; height: 82%; top: 16%; left: 6%; }	
 	.Date { margin: 0; padding:0; height: 15%; border-left: 10px solid orange; background: rgba(51,102,153,0.4); }
 	.Date h3 { margin-left: 1%; color: lightblue; font-size: 30px;}
@@ -102,7 +102,7 @@ nav a:hover { color: #336699; text-decoration: none;}
 	#GI { height:30%; width: 12%; top:5%; left:10%; background: orange; }
 	#TC { height:35%; width: 12%; top:36%; left:10%; background: orange; }
 	#BAC { height:22%; width: 12%; top:72%; left:10%; background: orange; }
-	*/
+	
  
 
  
