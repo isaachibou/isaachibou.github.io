@@ -94,7 +94,7 @@ nav a:hover { color: #336699; text-decoration: none;}
 
  
 
-#Years { position: absolute; top: 10%; left: 0%; width: 8%; list-style: none; padding: 0; border-right: 1px solid #FFF; }
+#Years { position: absolute; top: 15%; left: 0%; width: 8%; list-style: none; padding: 0; border-right: 1px solid #FFF; }
 .year { margin-top: 5%; width: 56%; text-align: right; color: #AAA; font-family:  'Nixie One', Serif;  font-size: 1rem;  border-bottom: 1px solid #AAA; cursor: pointer;
 		-webkit-transition: font-size .2s ease-in-out; -moz-transition: font-size .2s ease-in-out; -o-transition: font-size .2s ease-in-out; transition: font-size .2s ease-in-out;
 		-webkit-transition: width .5s ease-in-out; -moz-transition: width .5s ease-in-out; -o-transition: width .5s ease-in-out; transition: width .5s ease-in-out; 
@@ -106,7 +106,7 @@ nav a:hover { color: #336699; text-decoration: none;}
 		   -webkit-transition: all .2s ease-in-out; -moz-transition: all .2s ease-in-out; -o-transition: all .2s ease-in-out; transition: all .2s ease-in-out; 
 }
 
-#Months { padding: 0 0 0 1%;  position: absolute; top: 2%; left: 10%; height: auto; width: 25%; list-style: none; border-left: 1px solid #FFF; font-family:  'Nixie One', Serif; 
+#Months { padding: 0 0 0 1%;  position: absolute; top: 7%; left: 10%; height: auto; width: 25%; list-style: none; border-left: 1px solid #FFF; font-family:  'Nixie One', Serif; 
 		  -webkit-transition: font-size .2s ease-in-out; -moz-transition: font-size .2s ease-in-out; -o-transition: font-size .2s ease-in-out; transition: font-size .2s ease-in-out; 
 }
 .month { width: 50%; text-align: left; color: #AAA; font-size: 2rem; cursor: pointer;
