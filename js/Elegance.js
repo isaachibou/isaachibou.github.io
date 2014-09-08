@@ -16,8 +16,10 @@ $( document ).ready(function() {
 	/* Nav Links Scrolling */
 
 	/* Time Pad */
-	$( "#TimeDrag" ).draggable({ axis: "x" });
-	
+	$( "#TimeDrag" ).draggable({
+		axis: "x",
+		containment: "#TimePad", 
+	});
 });
 
 function welcome() {
