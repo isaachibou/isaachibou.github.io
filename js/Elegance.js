@@ -9,17 +9,13 @@ $( document ).ready(function() {
 	welcome();
 	
 	/* Nav Develop on click */
-	$( "#nav_trigger" ).click(function() {
+	$( '#nav_trigger' ).click(function() {
 		handleMenu();
 	}); 
 
-	/* Nav Links Scrolling */
-
-	/* Time Pad */
-	$( "#TimeDrag" ).draggable({
-		axis: "x",
-		containment: "#TimePad", 
-	});
+ 	/* Experiences */
+ 	calendar();
+	
 });
 
 function welcome() {
@@ -71,4 +67,65 @@ function foldMenu() {
 					'margin-top': '10%'					
 				});
 	});
+}
+
+function calendar() {
+
+	/* Years */
+	$( '#Years .year' ).mouseenter(function() {	
+ 		if( !( $(this).hasClass('datyear') ) )
+ 		{
+ 			$(this).toggleClass('disyear');
+ 		}
+ 	});
+
+ 	$( '#Years .year' ).mouseleave(function() {
+ 		$('#Years .year').each(function() {
+ 			if( $(this).hasClass('disyear') )
+ 			{
+ 				$(this).toggleClass('disyear');
+ 			}
+ 		});
+ 		 
+ 	});
+
+ 	$( '#Years .year' ).click(function() {
+ 		 $('#Years .year').each(function() {
+ 			if( $(this).hasClass('datyear') )
+ 			{
+ 				$(this).toggleClass('datyear');
+ 			}
+ 		});
+ 		$(this).toggleClass('datyear');
+ 	});
+
+ 	/* Months */
+ 	$( '#Months .month' ).mouseenter(function() {	
+ 		if( !( $(this).hasClass('datmonth') ) )
+ 		{
+ 			$(this).toggleClass('dismonth');
+ 		}
+ 	});
+
+ 	$( '#Months .month' ).mouseleave(function() {
+ 		$('#Months .month').each(function() {
+ 			if( $(this).hasClass('dismonth') )
+ 			{
+ 				$(this).toggleClass('dismonth');
+ 			}
+ 		});
+ 		 
+ 	});
+
+ 	$( '#Months .month' ).click(function() {
+ 		 $('#Months .month').each(function() {
+ 			if( $(this).hasClass('datmonth') )
+ 			{
+ 				$(this).toggleClass('datmonth');
+ 			}
+ 		});
+ 		$(this).toggleClass('datmonth');
+ 	});
+
+
 }
