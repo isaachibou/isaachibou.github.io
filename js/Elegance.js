@@ -15,6 +15,7 @@ $( document ).ready(function() {
 
  	/* Experiences */
  	calendar();
+ 	//events();
 	
 });
 
@@ -126,6 +127,13 @@ function calendar() {
  		});
  		$(this).toggleClass('datmonth');
  	});
+}
 
-
+function events() {
+	$('.primcom').mouseenter(function () {
+		$('#locationLabel').toggleClass('hidden');
+		$('.etq').toggleClass('hidden');
+		$('.primcontent').toggleClass('hidden');
+		//$('.primcom').toggleClass('grayscale');
+	});
 }
