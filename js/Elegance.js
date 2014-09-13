@@ -1,6 +1,6 @@
 $( document ).ready(function() {
 
-	/* Handle window  resize */
+	/* Window Events */
 	$(window).resize(function() {
 		foldMenu();
 	});
@@ -15,7 +15,7 @@ $( document ).ready(function() {
 
  	/* Experiences */
  	calendar();
- 	//events();
+ 	events();
 	
 });
 
@@ -130,10 +130,20 @@ function calendar() {
 }
 
 function events() {
+ 
+	$('#xpcover').mouseenter(function() {
+		$('#xpcover').css('opacity','0');
+	});
+
+	$('.primcom').mouseleave(function() {
+		$('#xpcover').css('opacity','1');
+	});
+
+	/*
 	$('.primcom').mouseenter(function () {
 		$('#locationLabel').toggleClass('hidden');
 		$('.etq').toggleClass('hidden');
 		$('.primcontent').toggleClass('hidden');
-		//$('.primcom').toggleClass('grayscale');
 	});
+*/
 }

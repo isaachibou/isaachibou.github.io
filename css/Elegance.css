@@ -102,7 +102,7 @@ nav a:hover { color: #336699; text-decoration: none;}
 #OverBlur p { font-family: "Nixie One"; color: white; font-size: 1.5em; font-size: 1.55rem;}
 
 /* Timeline */
-#HeroTimeline { position: relative; padding: 0; margin: 0; width: 100vw; max-width: 100%; height: 100vh; background:  #1a1a1a;  } 
+#HeroTimeline { position: relative; padding: 0; margin: 0; width: 100vw; max-width: 100%; height: 100vh; background: url('../images/jpg/textures/blackfabric.jpg'); } 
 #XP { position: absolute; top: 0%; left: 27%; color: white; font-size: 5rem; color: rgb(51,102,153); }
 
 
@@ -135,18 +135,27 @@ nav a:hover { color: #336699; text-decoration: none;}
 			 -webkit-transition: all .2s ease-in-out; -moz-transition: all .2s ease-in-out; -o-transition: all .2s ease-in-out; transition: all .2s ease-in-out; 
 }
 
-.primcom { position: absolute; padding: 0 0 0 2%; top: 5%; left: 8.5%; color: #FFF; font-family: 'Jura','Nixie One', Serif; font-size: 4rem; height: 54%; border-left: 1px solid #FFF; }
+.primcom { position: absolute; padding: 0; top: 5%; left: 8.3%; color: #FFF; font-family: 'Jura','Nixie One', Serif; font-size: 4rem; height: 90%; 
+		   -webkit-transition: all 1s ease 2s; -moz-transition: all 1s ease .2s; -o-transition: all 1s ease .2s; transition: all 1s ease .2s;
+}
 .primcom h2 { font-size: 3rem;}
 .primcom h4 { font-size: 2rem; color: #336699; }
 
-.etq { width: 95%; height: 100%; position: absolute; left: 5%; }
+#xpcover { padding: 0 0 0 2%; margin: 0; position: absolute; height: 60%; border-left: 1px solid #FFF; opacity: 1;
+			  -webkit-transition: all 1s ease 2s; -moz-transition: all 1s ease .2s; -o-transition: all 1s ease .2s; transition: all 1s ease .2s;
+}
+
+#xpdetails { height: 100%;  }
+
+.etq { height: 100%; width: 100%; border-left: 5px solid #336699; }
+#locationLabel { z-index :999; padding: 0 0 0 2%; height: 50%; height: 18%; width: 90%; position: absolute; top: 5%; right: 0%; color: #336699; font-size: 3.8rem; font-family: 'Oswald', 'Nixie One', sans-serif; background: rgba(26,26,26,0.8); }
+
+
+/* Bordel
+.etq { width: 82%; height: 100%; position: absolute; left: 4%; }
 #bac { position: absolute; top: 25%; height: 60%; width: 60%; }
-#m1_m6_2010 {  }
-
 #locationLabel { z-index :999; padding: 0 0 0 2%; height: 10%; height: 10.5%; width: 50%; position: absolute; top: 8%; left: 14%; color: #336699; font-size: 4rem; font-family: 'Oswald', 'Nixie One', sans-serif; background: rgba(26,26,26,0.8);  }
-
-
-
+*/
 
 
 
