@@ -107,14 +107,14 @@ nav a:hover { color: #336699; text-decoration: none;}
 
 
 #Years { position: absolute; top: 15%; min-width: 100px; list-style: none; padding: 0; border-right: 1px solid #FFF; }
-.year { margin-top: 5%; width: 56%; text-align: right; color: #AAA; font-family:  'Nixie One', Serif;  font-size: 1rem;  border-bottom: 1px solid #AAA; cursor: pointer;
+.year { margin-top: 5%; width: 56%; text-align: right; color: #FFF; font-family:  'Nixie One', Serif;  font-size: 1rem;  border-bottom: 1px solid #AAA; cursor: pointer;
 		-webkit-transition: font-size .2s ease-in-out; -moz-transition: font-size .2s ease-in-out; -o-transition: font-size .2s ease-in-out; transition: font-size .2s ease-in-out;
 		-webkit-transition: width .5s ease-in-out; -moz-transition: width .5s ease-in-out; -o-transition: width .5s ease-in-out; transition: width .5s ease-in-out; 
 }
-.datyear { padding: 0 5% 0 0; color: #FFF; width: 100%; font-size: 3rem; border-bottom: 1px solid #FFF; font-family: 'Oswald','Nixie One', Serif;
+.datyear { padding: 0 5% 0 0; color: #336699; width: 100%; font-size: 3rem; border-bottom: 1px solid #FFF; font-family: 'Oswald','Nixie One', Serif;
 		   -webkit-transition: font-size .2s ease-in-out; -moz-transition: font-size .2s ease-in-out; -o-transition: font-size .2s ease-in-out; transition: font-size .2s ease-in-out; 
 }
-.disyear { padding: 0 5% 0 0; color: #AAA; width: 100%; font-size: 3rem; border-bottom: 1px solid #FFF;  font-family: 'Oswald','Nixie One', Serif;
+.disyear { padding: 0 5% 0 0; color: #FFF; width: 100%; font-size: 3rem; border-bottom: 1px solid #FFF;  font-family: 'Oswald','Nixie One', Serif;
 		   -webkit-transition: all .2s ease-in-out; -moz-transition: all .2s ease-in-out; -o-transition: all .2s ease-in-out; transition: all .2s ease-in-out; 
 }
 
@@ -122,10 +122,10 @@ nav a:hover { color: #336699; text-decoration: none;}
 #Months { padding: 0 0 0 1%;  position: absolute; min-width: 260px; left: 1%; top: 7%; height: auto; list-style: none; border-left: 1px solid #FFF; font-family:  'Nixie One', Serif; 
 		  -webkit-transition: font-size .2s ease-in-out; -moz-transition: font-size .2s ease-in-out; -o-transition: font-size .2s ease-in-out; transition: font-size .2s ease-in-out; 
 }
-.month {  padding: 0 0 0 1%;text-align: left; color: #AAA; font-size: 2rem; cursor: pointer; width: 70%;
+.month {  padding: 0 0 0 1%;text-align: left; color: #FFF; font-size: 2rem; cursor: pointer; width: 70%;
 		-webkit-transition: font-size .2s ease-in-out; -moz-transition: font-size .2s ease-in-out; -o-transition: font-size .2s ease-in-out; transition: font-size .2s ease-in-out;
 }
-.datmonth { font-weight: bold; font-family: 'Jura','Nixie One', Serif; font-size: 4rem; color: #FFF; width: 88%;   border-right: 1px solid white;
+.datmonth { font-weight: bold; font-family: 'Jura','Nixie One', Serif; font-size: 4rem; color: #336699; width: 88%;   border-right: 1px solid white;
 	        -webkit-transition: all .2s ease-in-out; -moz-transition: all .2s ease-in-out; -o-transition: all .2s ease-in-out; transition: all .2s ease-in-out; 
 }
 .dismonth { font-family: 'Jura','Nixie One', Serif; font-size: 4rem; color: #FFF; 
@@ -141,7 +141,7 @@ nav a:hover { color: #336699; text-decoration: none;}
 .primcom h2 { font-size: 3rem;}
 .primcom h4 { font-size: 2rem; color: #336699; }
 
-#xpcover { padding: 0 0 0 2%; margin: 0; position: absolute; height: 60%; border-left: 1px solid #FFF; opacity: 1;
+#xpcover { z-index :999; padding: 0 0 0 2%; margin: 0; position: absolute; height: 60%; border-left: 1px solid #FFF; opacity: 1;
 			  -webkit-transition: all 1s ease 2s; -moz-transition: all 1s ease .2s; -o-transition: all 1s ease .2s; transition: all 1s ease .2s;
 }
 
