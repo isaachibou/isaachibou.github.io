@@ -133,13 +133,16 @@ function events() {
  
 	$('#xpcover').mouseenter(function() {
 		$('#xpcover').css('opacity','0');
+		$('#xpdetails').css('z-index','999');
+		$('#xpdetails').css('opacity','1');
 	});
-
+/*
 	$('.primcom').mouseleave(function() {
 		$('#xpcover').css('opacity','1');
+		$('#xpdetails').css('opacity','0');
 	});
 
-	/*
+	
 	$('.primcom').mouseenter(function () {
 		$('#locationLabel').toggleClass('hidden');
 		$('.etq').toggleClass('hidden');

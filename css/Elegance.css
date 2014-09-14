@@ -138,22 +138,30 @@ nav a:hover { color: #336699; text-decoration: none;}
 .primcom { position: absolute; padding: 0; top: 5%; left: 8.3%; color: #FFF; font-family: 'Jura','Nixie One', Serif; font-size: 4rem; height: 90%; 
 		   -webkit-transition: all 1s ease 2s; -moz-transition: all 1s ease .2s; -o-transition: all 1s ease .2s; transition: all 1s ease .2s;
 }
-.primcom h2 { font-size: 3rem;}
-.primcom h4 { font-size: 2rem; color: #336699; }
+.primcom h2 { font-size: 4rem; color: #336699; }
+.primcom h4 { font-size: 3rem; color: #FFF; }
+.primcom p { font-size: 2rem;}
+
+#xpxplorer { padding: 3% 0 0 2%; position: absolute; bottom: 1%;  left: 1%; height: 20%; }
+#xpxplorer a { padding: 0 0  0 2%;font-family: 'Jura'; font-weight: normal ;float: left; display: block; font-size: 2.5rem; width: 40% ; height: 50%; border-radius: 15px; border: 1px solid #336699; background: rgba(51,102,100,0.3); cursor :pointer; }
+#xpxplorer span { font-size: 3.5rem; vertical-align: -30%;}
+#next{ margin-left: 7%; }
 
 #xpcover { z-index :999; padding: 0 0 0 2%; margin: 0; position: absolute; height: 60%; border-left: 1px solid #FFF; opacity: 1;
-			  -webkit-transition: all 1s ease 2s; -moz-transition: all 1s ease .2s; -o-transition: all 1s ease .2s; transition: all 1s ease .2s;
+		   -webkit-transition: all 1s ease 2s; -moz-transition: all 1s ease .2s; -o-transition: all 1s ease .2s; transition: all 1s ease .2s;
 }
 
-#xpdetails { height: 100%;  }
+#xpdetails { padding: 0 0 0 5%; height: 100%; border-left: 1px solid #FFF; opacity: 0;
+ 			 -webkit-transition: all 1s ease 2s; -moz-transition: all 1s ease .2s; -o-transition: all 1s ease .2s; transition: all 1s ease .2s;
+ }
 
 .etq { height: 100%; width: 100%; border-left: 5px solid #336699; }
-#locationLabel { z-index :999; padding: 0 0 0 2%; height: 50%; height: 18%; width: 90%; position: absolute; top: 5%; right: 0%; color: #336699; font-size: 3.8rem; font-family: 'Oswald', 'Nixie One', sans-serif; background: rgba(26,26,26,0.8); }
-
+#locationLabel { z-index :998; padding: 0 0 0 2%; height: 55%; height: 18%; width: 65%; position: absolute; top: 5%; right: 0%; color: #336699; font-size: 3.8rem; font-family: 'Oswald', 'Nixie One', sans-serif; background: rgba(26,26,26,0.8); }
+#bac { height: 40%; width: 80%; }
 
 /* Bordel
 .etq { width: 82%; height: 100%; position: absolute; left: 4%; }
-#bac { position: absolute; top: 25%; height: 60%; width: 60%; }
+
 #locationLabel { z-index :999; padding: 0 0 0 2%; height: 10%; height: 10.5%; width: 50%; position: absolute; top: 8%; left: 14%; color: #336699; font-size: 4rem; font-family: 'Oswald', 'Nixie One', sans-serif; background: rgba(26,26,26,0.8);  }
 */
 
