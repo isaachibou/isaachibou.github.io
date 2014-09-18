@@ -134,6 +134,9 @@ nav a:hover { color: #336699; text-decoration: none;}
 .demmonths { padding-left: 20%;  font-weight: bold; font-family: 'Jura','Nixie One', Serif; font-size: 2.5rem; color: #FFF ; width: 88%;  border-right: 1px solid white;
 			 -webkit-transition: all .2s ease-in-out; -moz-transition: all .2s ease-in-out; -o-transition: all .2s ease-in-out; transition: all .2s ease-in-out; 
 }
+.startmonth { font-weight: bold; font-family: 'Jura','Nixie One', Serif; font-size: 4rem; color: #336699; width: 88%;   border-right: 1px solid white;
+	        -webkit-transition: all .2s ease-in-out; -moz-transition: all .2s ease-in-out; -o-transition: all .2s ease-in-out; transition: all .2s ease-in-out; 
+}
 
 .primcom { position: absolute; padding: 0; top: 5%; left: 8.3%; color: #FFF; font-family: 'Jura','Nixie One', Serif; font-size: 4rem; height: 90%; 
 		   -webkit-transition: all 1s ease 2s; -moz-transition: all 1s ease .2s; -o-transition: all 1s ease .2s; transition: all 1s ease .2s;
@@ -147,25 +150,17 @@ nav a:hover { color: #336699; text-decoration: none;}
 #xpxplorer span { font-size: 3.5rem; vertical-align: -30%;}
 #next{ margin-left: 7%; }
 
-#xpcover { z-index :999; padding: 0 0 0 2%; margin: 0; position: absolute; height: 60%; border-left: 1px solid #FFF; opacity: 1;
+.xpcover { z-index :999; padding: 0 0 0 2%; margin: 0; position: absolute; height: 60%; border-left: 1px solid #FFF; opacity: 1;
 		   -webkit-transition: all 1s ease 2s; -moz-transition: all 1s ease .2s; -o-transition: all 1s ease .2s; transition: all 1s ease .2s;
 }
 
-#xpdetails { padding: 0 0 0 5%; height: 100%; border-left: 1px solid #FFF; opacity: 0;
+.xpdetails { padding: 0 0 0 5%; height: 100%; border-left: 1px solid #FFF; opacity: 0;
  			 -webkit-transition: all 1s ease 2s; -moz-transition: all 1s ease .2s; -o-transition: all 1s ease .2s; transition: all 1s ease .2s;
  }
 
 .etq { height: 100%; width: 100%; border-left: 5px solid #336699; }
-#locationLabel { z-index :998; padding: 0 0 0 2%; height: 55%; height: 18%; width: 65%; position: absolute; top: 5%; right: 0%; color: #336699; font-size: 3.8rem; font-family: 'Oswald', 'Nixie One', sans-serif; background: rgba(26,26,26,0.8); }
+.locationLabel { z-index :998; padding: 0 0 0 2%; height: 55%; height: 18%; width: 65%; position: absolute; top: 5%; right: 0%; color: #336699; font-size: 3.5rem!important; font-family: 'Oswald', 'Nixie One', sans-serif; background: rgba(26,26,26,0.8); }
 #bac { height: 40%; width: 80%; }
-
-/* Bordel
-.etq { width: 82%; height: 100%; position: absolute; left: 4%; }
-
-#locationLabel { z-index :999; padding: 0 0 0 2%; height: 10%; height: 10.5%; width: 50%; position: absolute; top: 8%; left: 14%; color: #336699; font-size: 4rem; font-family: 'Oswald', 'Nixie One', sans-serif; background: rgba(26,26,26,0.8);  }
-*/
-
-
 
 
 

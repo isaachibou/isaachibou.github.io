@@ -15,7 +15,8 @@ $( document ).ready(function() {
 
  	/* Experiences */
  	calendar();
- 	events();
+ 	eventcover();
+ 	getEvent('2010m1');
 	
 });
 
@@ -91,7 +92,7 @@ function calendar() {
  	});
 
  	$( '#Years .year' ).click(function() {
- 		 $('#Years .year').each(function() {
+ 		$('#Years .year').each(function() {
  			if( $(this).hasClass('datyear') )
  			{
  				$(this).toggleClass('datyear');
@@ -124,29 +125,68 @@ function calendar() {
  			{
  				$(this).toggleClass('datmonth');
  			}
+ 			if( $(this).hasClass('demmonths') )
+ 			{
+ 				$(this).toggleClass('demmonths');
+ 			}
+ 			if( $(this).hasClass('startmonth') )
+ 			{
+ 				$(this).toggleClass('startmonth');
+ 			}
  		});
  		$(this).toggleClass('datmonth');
+
+ 		$('#Years .year').each(function() {
+	 	if( $(this).hasClass('datyear') )
+	 	{
+	 	 	id = $(this).attr('id').substring(2,6);
+	 	}
+ 		});
+
+	 	id = id + $(this).attr('id');
+	 	getEvent(id);
  	});
 }
 
-function events() {
- 
-	$('#xpcover').mouseenter(function() {
-		$('#xpcover').css('opacity','0');
-		$('#xpdetails').css('z-index','999');
-		$('#xpdetails').css('opacity','1');
+function eventcover() {
+	$('.xpcover').mouseenter(function() {
+		$('.xpcover').css('opacity','0');
+		$('.xpdetails').css('z-index','999');
+		$('.xpdetails').css('opacity','1');
 	});
-/*
-	$('.primcom').mouseleave(function() {
-		$('#xpcover').css('opacity','1');
-		$('#xpdetails').css('opacity','0');
+}
+
+function getEvent(id) {
+	var k = id.substring(4,6);
+	var s = parseInt(k.substring(1,2));
+	var iddef;	 
+
+	for( var j=s+1; j<13; j++)
+	{
+		if( $('#'+id+'m'+j ).length != 0) {
+			iddef = id+'m'+j;
+			break;
+		}
+	}
+
+	$("#HeroTimeline .primcom").each(function() {
+		if( !($(this).hasClass('hidden')) )
+		{
+			$(this).toggleClass('hidden');
+		}
 	});
 
-	
-	$('.primcom').mouseenter(function () {
-		$('#locationLabel').toggleClass('hidden');
-		$('.etq').toggleClass('hidden');
-		$('.primcontent').toggleClass('hidden');
-	});
-*/
+	$('#'+ iddef).toggleClass("hidden");
+
+	var e = iddef.substring(6,8);
+
+	$('#' + k).toggleClass('startmonth');
+	$('#' + e).toggleClass('datmonth');
+
+	e = parseInt(e.substring(1,2));
+
+	for(j=s+1; j<e; j++)
+	{
+		$('#' + 'm' +j).toggleClass('demmonths');
+	}
 }
