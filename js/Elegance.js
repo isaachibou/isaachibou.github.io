@@ -84,7 +84,7 @@ function calendar() {
  	$( '#Years .year' ).mouseleave(function() {
  		$('#Years .year').each(function() {
  			if( $(this).hasClass('disyear') )
- 			{
+ 			{ 				
  				$(this).toggleClass('disyear');
  			}
  		});
@@ -120,6 +120,9 @@ function calendar() {
  	});
 
  	$( '#Months .month' ).click(function() {
+ 		$("#HeroTimeline .xpcover").css('opacity','1');
+ 		$('#HeroTimeline .xpdetails').css('opacity','0');
+
  		 $('#Months .month').each(function() {
  			if( $(this).hasClass('datmonth') )
  			{
@@ -149,11 +152,34 @@ function calendar() {
 }
 
 function eventcover() {
-	$('.xpcover').mouseenter(function() {
+/*	$('.xpcover').click(function() {
 		$('.xpcover').css('opacity','0');
 		$('.xpdetails').css('z-index','999');
 		$('.xpdetails').css('opacity','1');
 	});
+
+	$( '#Months .month' ).mouseenter(function() {
+ 		$('.xpcover').css('opacity','1');
+		$('.xpdetails').css('z-index','1');
+		$('.xpdetails').css('opacity','0');
+ 	});
+*/
+	$('.xpcover').click(function() {
+		$('.xpcover').toggleClass('minixpcover');
+		$('.locationLabel').toggleClass('hidden');
+		$('.xpdetails').css('opacity','1');
+	});
+/*
+	$( '#Months .month' ).mouseenter(function() {
+ 		$('.xpcover').css('opacity','1');
+ 		$('.xpcover').css('width','83.3333%');
+		$('.xpcover').css('height','60%');
+		$('.xpcover').css('padding-left','21px');
+		$('.locationLabel').css('opacity',1);
+		$('.xpdetails').css('z-index','1');
+		$('.xpdetails').css('opacity','0');
+ 	});
+*/
 }
 
 function getEvent(id) {
@@ -169,6 +195,7 @@ function getEvent(id) {
 		}
 	}
 
+
 	$("#HeroTimeline .primcom").each(function() {
 		if( !($(this).hasClass('hidden')) )
 		{
@@ -181,11 +208,11 @@ function getEvent(id) {
 	var e = iddef.substring(6,8);
 
 	$('#' + k).toggleClass('startmonth');
-	$('#' + e).toggleClass('datmonth');
+	 
 
 	e = parseInt(e.substring(1,2));
 
-	for(j=s+1; j<e; j++)
+	for(j=s+1; j<e+1; j++)
 	{
 		$('#' + 'm' +j).toggleClass('demmonths');
 	}
