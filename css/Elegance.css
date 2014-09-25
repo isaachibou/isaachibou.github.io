@@ -3,9 +3,9 @@ html { font-size: 17px; }
 html,body { background: #1a1a1a; padding : 0; margin: 0; width: 100vw; min-width: 320px; min-height: 700px; height: 100vh; position: relative; overflow-x: hidden; }
 
 .hidden { visibility: hidden; display: none; }
-.transparent { opacity: 0; -webkit-transition: all 1s ease-in-out; -moz-transition: all 1s ease-in-out; -o-transition: all 1s ease-in-out; transition: all 1s ease-in-out; } 
+.unselectable {-moz-user-select: none; -webkit-user-select: none;  -ms-user-select: none; user-select: none; -webkit-user-drag: none; user-drag: none; }
 
-/* Filters */ 
+ /* Filters */ 
 .saturate {-webkit-filter: saturate(3);  }
 .grayscale {-webkit-filter: grayscale(100%);  filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'matrix\' values=\'0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0\'/></filter></svg>#grayscale"); }
 .contrast {-webkit-filter: contrast(160%);}
@@ -106,25 +106,31 @@ nav a:hover { color: #336699; text-decoration: none;}
 #HeroTimeline { position: relative; padding: 0; margin: 0; width: 100vw; max-width: 100%; height: 100vh; background: url('../images/jpg/textures/blackfabric.jpg'); } 
 #XP { position: absolute; top: 0%; left: 27%; color: white; font-size: 5rem; color: rgb(51,102,153); }
 
-
+	/* Years */
 #Years { position: absolute; top: 15%; min-width: 100px; list-style: none; padding: 0; border-right: 1px solid #FFF; }
 .year { margin-top: 5%; width: 56%; text-align: right; color: #FFF; font-family:  'Nixie One', Serif;  font-size: 1rem;  border-bottom: 1px solid #AAA; cursor: pointer;
 		-webkit-transition: font-size .2s ease-in-out; -moz-transition: font-size .2s ease-in-out; -o-transition: font-size .2s ease-in-out; transition: font-size .2s ease-in-out;
 		-webkit-transition: width .5s ease-in-out; -moz-transition: width .5s ease-in-out; -o-transition: width .5s ease-in-out; transition: width .5s ease-in-out; 
 }
+.year:hover { padding: 0 5% 0 0; color: #FFF; width: 100%; font-size: 3rem; border-bottom: 1px solid #FFF;  font-family: 'Oswald','Nixie One', Serif;
+		   	   -webkit-transition: all .2s ease-in-out; -moz-transition: all .2s ease-in-out; -o-transition: all .2s ease-in-out; transition: all .2s ease-in-out; 
+}
 .datyear { padding: 0 5% 0 0; color: #336699; width: 100%; font-size: 3rem; border-bottom: 1px solid #FFF; font-family: 'Oswald','Nixie One', Serif;
 		   -webkit-transition: font-size .2s ease-in-out; -moz-transition: font-size .2s ease-in-out; -o-transition: font-size .2s ease-in-out; transition: font-size .2s ease-in-out; 
 }
-.disyear { padding: 0 5% 0 0; color: #FFF; width: 100%; font-size: 3rem; border-bottom: 1px solid #FFF;  font-family: 'Oswald','Nixie One', Serif;
-		   -webkit-transition: all .2s ease-in-out; -moz-transition: all .2s ease-in-out; -o-transition: all .2s ease-in-out; transition: all .2s ease-in-out; 
-}
-
-
+ 
+	/* Months */
 #Months { padding: 0 0 0 1%;  position: absolute; min-width: 260px; left: 1%; top: 7%; height: auto; list-style: none; border-left: 1px solid #FFF; font-family:  'Nixie One', Serif; 
 		  -webkit-transition: font-size .2s ease-in-out; -moz-transition: font-size .2s ease-in-out; -o-transition: font-size .2s ease-in-out; transition: font-size .2s ease-in-out; 
 }
 .month {  padding: 0 0 0 1%;text-align: left; color: #FFF; font-size: 2rem; cursor: pointer; width: 70%;
 		-webkit-transition: font-size .2s ease-in-out; -moz-transition: font-size .2s ease-in-out; -o-transition: font-size .2s ease-in-out; transition: font-size .2s ease-in-out;
+}
+.pertinentmonth { font-family: 'Jura','Nixie One', Serif; font-size: 3rem; color: #FFF; 
+	       		 -webkit-transition: all .2s ease-in-out; -moz-transition: all .2s ease-in-out; -o-transition: all .2s ease-in-out; transition: all .2s ease-in-out;     		 
+}
+.pertinentmonth:hover { font-family: 'Jura','Nixie One', Serif; font-size: 4rem; color: #FFF; 
+	        -webkit-transition: all .2s ease-in-out; -moz-transition: all .2s ease-in-out; -o-transition: all .2s ease-in-out; transition: all .2s ease-in-out; 
 }
 .datmonth { font-weight: bold; font-family: 'Jura','Nixie One', Serif; font-size: 4rem; color: #336699; width: 88%;   border-right: 1px solid white;
 	        -webkit-transition: all .2s ease-in-out; -moz-transition: all .2s ease-in-out; -o-transition: all .2s ease-in-out; transition: all .2s ease-in-out; 
@@ -132,47 +138,34 @@ nav a:hover { color: #336699; text-decoration: none;}
 .dismonth { font-family: 'Jura','Nixie One', Serif; font-size: 4rem; color: #FFF; 
 	        -webkit-transition: all .2s ease-in-out; -moz-transition: all .2s ease-in-out; -o-transition: all .2s ease-in-out; transition: all .2s ease-in-out; 
 }
-.demmonths { padding-left: 20%;  font-weight: bold; font-family: 'Jura','Nixie One', Serif; font-size: 2.5rem; color: #FFF ; width: 88%;  border-right: 1px solid white;
+.demmonths { padding-left: 20%;  font-weight: bold; font-family: 'Jura','Nixie One', Serif; font-size: 2.5rem; color: #336699 ; width: 88%;  border-right: 1px solid white;
 			 -webkit-transition: all .2s ease-in-out; -moz-transition: all .2s ease-in-out; -o-transition: all .2s ease-in-out; transition: all .2s ease-in-out; 
 }
-.demmonths:hover { color: #336699;
-			-webkit-transition: all .2s ease-in-out; -moz-transition: all .2s ease-in-out; -o-transition: all .2s ease-in-out; transition: all .2s ease-in-out;
-}
-.startmonth { font-weight: bold; font-family: 'Jura','Nixie One', Serif; font-size: 4rem; color: #336699; width: 88%;   border-right: 1px solid white;
-	        -webkit-transition: all .2s ease-in-out; -moz-transition: all .2s ease-in-out; -o-transition: all .2s ease-in-out; transition: all .2s ease-in-out; 
-}
-
-.primcom { position: absolute; padding: 0; top: 5%; left: 8.3%; color: #FFF; font-family: 'Jura','Nixie One', Serif; font-size: 4rem; height: 90%; 
+ 
+#primcontent { position: absolute; padding: 0; top: 5%; left: 8.3%; color: #FFF; font-family: 'Jura','Nixie One', Serif; font-size: 4rem; height: 90%; border-left: 1px solid white;
 		   -webkit-transition: all 1s ease 2s; -moz-transition: all 1s ease .2s; -o-transition: all 1s ease .2s; transition: all 1s ease .2s;
 }
-.primcom h2 { font-size: 4rem; color: #336699; }
-.primcom h4 { font-size: 3rem; color: #FFF; }
-.primcom p { font-size: 2rem;}
+#primcontent h2 { font-size: 4rem; color: #336699; }
+#primcontent h4 { font-size: 3rem; color: #FFF; }
+#primcontent p { font-size: 2rem; }
 
 #xpxplorer { padding: 3% 0 0 2%; position: absolute; bottom: 1%;  left: 1%; height: 20%; }
-#xpxplorer a { padding: 0 0  0 2%;font-family: 'Jura'; font-weight: normal ;float: left; display: block; font-size: 2.5rem; width: 40% ; height: 50%; border-radius: 15px; border: 1px solid #336699; background: rgba(51,102,100,0.3); cursor :pointer; }
+#xpxplorer a { padding: 0 0  0 2%; font-family: 'Jura'; font-weight: normal ;float: left; display: block; font-size: 2.5rem; width: 40% ; height: 50%; border-radius: 15px; border: 1px solid #336699; background: rgba(51,102,100,0.3); cursor :pointer; }
 #xpxplorer span { font-size: 3.5rem; vertical-align: -30%;}
 #next{ margin-left: 7%; }
-
-.xpcover { z-index :999; padding: 0 0 0 2%; margin: 0; position: absolute; height: 60%; border-left: 1px solid #FFF; opacity: 1;
-		   -webkit-transition: all 1s ease 2s; -moz-transition: all 1s ease .2s; -o-transition: all 1s ease .2s; transition: all 1s ease .2s;
+ 
+.xpcover { z-index :800; padding: 0 0 0 2%; margin: 0; position: absolute; height: 100%; border-left: 1px solid #FFF; background: rgba(52,100,153,0.5); 
+		   -webkit-transition: all 1s ease 2s; -moz-transition: all 1s ease .2s; -o-transition: all 1s ease .2s; transition: all 1s ease .2s; 
 }
-
-.minixpcover { width: 100px; height: 60px; }
-.xpcover:hover   { opacity: 1; box-shadow: 0px 0px 70px rgba(255,255,255,0.8);
- /*Reflection*/  
- 				-webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(.7, transparent), to(rgba(0,0,0,0.4))); /*Glow*/ 
- 				-webkit-box-shadow: 0px 0px 20px rgba(255,255,255,0.8); 
- 				-moz-box-shadow: 0px 0px 20px rgba(255,255,255,0.8); 
-} 
-.xpdetails { padding: 0 0 0 5%; height: 100%; border-left: 1px solid #FFF; opacity: 0;
+ 
+.xpdetails { position: absolute; padding: 0 0 0 5%; height: 100%; border-left: 1px solid #FFF;  
  			 -webkit-transition: all 1s ease 2s; -moz-transition: all 1s ease .2s; -o-transition: all 1s ease .2s; transition: all 1s ease .2s;
  }
 
 .etq { height: 100%; width: 100%; border-left: 5px solid #336699; }
 .locationLabel { z-index :998; padding: 0 0 0 2%; min-height: 90px; height: 25%; min-width: 300px; width: 65%; position: absolute; top: 5%; right: 0%; color: #336699; font-size: 3.5rem!important; font-family: 'Oswald', 'Nixie One', sans-serif; background: rgba(26,26,26,0.8); }
-.eventLabel { position: absolute;  top: 48%; left: 16%; margin: 0; padding: 0; font-family: 'Oswald','Nixie One', Serif; color: lightblue; font-size: 1.8rem; }
-.periodLabel { position: absolute;  top: 70%; left: 16%; margin: 0; padding: 0 ;font-family: 'Oswald','Nixie One', Serif; color: #FFF ; font-size: 1.6rem; }
+.eventLabel { position: absolute;  top: 48%; left: 15%; margin: 0; padding: 0; font-family: 'Oswald','Nixie One', Serif; color: lightblue; font-size: 1.8rem; }
+.periodLabel { position: absolute;  top: 70%; left: 15%; margin: 0; padding: 0 ;font-family: 'Oswald','Nixie One', Serif; color: #FFF ; font-size: 1.6rem; }
 #bac { height: 40%; width: 80%; }
 
 

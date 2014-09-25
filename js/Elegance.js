@@ -15,8 +15,8 @@ $( document ).ready(function() {
 
  	/* Experiences */
  	calendar();
- 	eventcover();
- 	getEvent('2010m1');
+ 	/*getEvent('2010m1'); */
+ 	highlightpertinents(2010);
 	
 });
 
@@ -72,57 +72,16 @@ function foldMenu() {
 }
 
 function calendar() {
-
 	/* Years */
-	$( '#Years .year' ).mouseenter(function() {	
- 		if( !( $(this).hasClass('datyear') ) )
- 		{
- 			$(this).toggleClass('disyear');
- 		}
- 	});
-
- 	$( '#Years .year' ).mouseleave(function() {
- 		$('#Years .year').each(function() {
- 			if( $(this).hasClass('disyear') )
- 			{ 				
- 				$(this).toggleClass('disyear');
- 			}
- 		});
- 		 
- 	});
-
  	$( '#Years .year' ).click(function() {
- 		$('#Years .year').each(function() {
- 			if( $(this).hasClass('datyear') )
- 			{
- 				$(this).toggleClass('datyear');
- 			}
- 		});
+ 		 
+ 		id = $(this).attr('id').substring(2,6);
  		$(this).toggleClass('datyear');
+ 		highlightpertinents(id);
  	});
 
  	/* Months */
- 	$( '#Months .month' ).mouseenter(function() {	
- 		if( !( $(this).hasClass('datmonth') ) )
- 		{
- 			$(this).toggleClass('dismonth');
- 		}
- 	});
-
- 	$( '#Months .month' ).mouseleave(function() {
- 		$('#Months .month').each(function() {
- 			if( $(this).hasClass('dismonth') )
- 			{
- 				$(this).toggleClass('dismonth');
- 			}
- 		});
- 		 
- 	});
-
  	$( '#Months .month' ).click(function() {
- 		$("#HeroTimeline .xpcover").css('opacity','1');
- 		$('#HeroTimeline .xpdetails').css('opacity','0');
-
  		 $('#Months .month').each(function() {
  			if( $(this).hasClass('datmonth') )
  			{
@@ -132,18 +91,18 @@ function calendar() {
  			{
  				$(this).toggleClass('demmonths');
  			}
- 			if( $(this).hasClass('startmonth') )
- 			{
- 				$(this).toggleClass('startmonth');
- 			}
  		});
- 		$(this).toggleClass('datmonth');
+
+ 		if( $(this).hasClass('pertinentmonth') )
+ 		{
+ 			$(this).toggleClass('datmonth');
+ 		}
 
  		$('#Years .year').each(function() {
-	 	if( $(this).hasClass('datyear') )
-	 	{
-	 	 	id = $(this).attr('id').substring(2,6);
-	 	}
+		 	if( $(this).hasClass('datyear') )
+		 	{
+		 	 	id = $(this).attr('id').substring(2,6);
+		 	}
  		});
 
 	 	id = id + $(this).attr('id');
@@ -151,52 +110,28 @@ function calendar() {
  	});
 }
 
-function eventcover() {
-/*	$('.xpcover').click(function() {
-		$('.xpcover').css('opacity','0');
-		$('.xpdetails').css('z-index','999');
-		$('.xpdetails').css('opacity','1');
-	});
-
-	$( '#Months .month' ).mouseenter(function() {
- 		$('.xpcover').css('opacity','1');
-		$('.xpdetails').css('z-index','1');
-		$('.xpdetails').css('opacity','0');
- 	});
-*/
-	$('.xpcover').click(function() {
-		$('.xpcover').toggleClass('minixpcover');
-		$('.locationLabel').toggleClass('hidden');
-		$('.xpdetails').css('opacity','1');
-	});
-/*
-	$( '#Months .month' ).mouseenter(function() {
- 		$('.xpcover').css('opacity','1');
- 		$('.xpcover').css('width','83.3333%');
-		$('.xpcover').css('height','60%');
-		$('.xpcover').css('padding-left','21px');
-		$('.locationLabel').css('opacity',1);
-		$('.xpdetails').css('z-index','1');
-		$('.xpdetails').css('opacity','0');
- 	});
-*/
-}
-
 function getEvent(id) {
-	var k = id.substring(4,6);
-	var s = parseInt(k.substring(1,2));
+	var k = id.substring(4,7);
+	var s = parseInt(k.substring(1,3));
 	var iddef;	 
 
 	for( var j=s+1; j<13; j++)
 	{
-		if( $('#'+id+'m'+j ).length != 0) {
-			iddef = id+'m'+j;
-			break;
+		if(j < 10) {
+			if( $('#'+id+'m'+'0'+j ).length != 0) {
+				iddef = id+'m'+'0'+j;
+				break;
+			}
+		}
+		else {
+			if( $('#'+id+'m'+j ).length != 0) {
+				iddef = id+'m'+j;
+				break;
+			}
 		}
 	}
 
-
-	$("#HeroTimeline .primcom").each(function() {
+	$("#HeroTimeline .xpdetails").each(function() {
 		if( !($(this).hasClass('hidden')) )
 		{
 			$(this).toggleClass('hidden');
@@ -205,15 +140,26 @@ function getEvent(id) {
 
 	$('#'+ iddef).toggleClass("hidden");
 
-	var e = iddef.substring(6,8);
+	var e = iddef.substring(8,10);
+	e = parseInt(e);
 
-	$('#' + k).toggleClass('startmonth');
-	 
-
-	e = parseInt(e.substring(1,2));
-
-	for(j=s+1; j<e+1; j++)
+	for(j=s; j<e+1; j++)
 	{
-		$('#' + 'm' +j).toggleClass('demmonths');
+		if(j < 10) { $('#' + 'm' +'0' +j).toggleClass('demmonths'); }
+		else { $('#' + 'm' +j).toggleClass('demmonths'); }
 	}
+}
+
+function highlightpertinents( id ) {
+	$("#HeroTimeline .xpdetails").each(function() {
+		if( $(this).attr('id').substring(0,4) == id )
+		{
+			var per = $(this).attr('id').substring(4,7);
+
+			if( !($('#'+ per).hasClass('pertinentmonth')) )
+			{
+				$('#' + per).toggleClass('pertinentmonth');
+			}
+		}
+	});
 }
