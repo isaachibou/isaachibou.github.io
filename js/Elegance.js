@@ -15,10 +15,14 @@ $( document ).ready(function() {
 
  	/* Experiences */
  	calendar();
- 	/*getEvent('2010m1'); */
  	highlightpertinents(2010);
-	
+
+ 	$(window).bind('scroll', function(e) {
+ 		parallaxpourri();
+ 	});
+ 	 
 });
+
 
 function welcome() {
 	$('#OverBack').css('width','74%');
@@ -162,4 +166,13 @@ function highlightpertinents( id ) {
 			}
 		}
 	});
+}
+
+function parallaxpourri() {
+	var scrolledY = $(window).scrollTop();
+	$('#HeroBack').css('background-position','center -'+((scrolledY*0.2))+'px');
+	$('#HeroProfil').css('background-position','center -'+((scrolledY*0.2))+'px');
+	$('#HeroTimeline').css('background-position','center -'+((scrolledY*0.2))+'px');
+	/*.css('top','-'+((scrolledY*0.5))+'px');*/
+	/*$('#OverBack').css('top','-'+((scrolledY*0.5))+'px');*/
 }
