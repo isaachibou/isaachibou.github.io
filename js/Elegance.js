@@ -170,9 +170,16 @@ function highlightpertinents( id ) {
 
 function parallaxpourri() {
 	var scrolledY = $(window).scrollTop();
+	
 	$('#HeroBack').css('background-position','center -'+((scrolledY*0.2))+'px');
+	
 	$('#HeroProfil').css('background-position','center -'+((scrolledY*0.2))+'px');
+	$('#HeroProfil').css('top','-' + (scrolledY) +'px');
+
 	$('#HeroTimeline').css('background-position','center -'+((scrolledY*0.2))+'px');
+	$('#HeroTimeline').css('top','-' + (scrolledY) +'px');
+
+	//$('#HeroTimeline').css('background-position','center -'+((scrolledY*0.2))+'px');
 	/*.css('top','-'+((scrolledY*0.5))+'px');*/
 	/*$('#OverBack').css('top','-'+((scrolledY*0.5))+'px');*/
 }
