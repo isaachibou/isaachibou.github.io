@@ -1,0 +1,129 @@
+/******************************************************************************************************************************************************************************
+* BASICS
+******************************************************************************************************************************************************************************/
+
+
+html { font-size: 17px; }
+html,body 
+{
+	background: #1a1a1a; 
+	padding : 0; 
+	margin: 0; 
+	width: 100vw; 
+	min-width: 320px; 
+	min-height: 700px; 
+	height: 100vh; 
+	position: relative; 
+	/*background: #1a1a1a url("../images/jpg/textures/tapisserie.jpg") center 0 no-repeat fixed; background-size: cover;*/
+	 
+}
+
+.hidden { visibility: hidden; display: none; }
+.unselectable {-moz-user-select: none; -webkit-user-select: none;  -ms-user-select: none; user-select: none; -webkit-user-drag: none; user-drag: none; }
+
+
+
+/******************************************************************************************************************************************************************************
+* FILTERS
+******************************************************************************************************************************************************************************/
+
+
+.saturate {-webkit-filter: saturate(3);  }
+.grayscale {-webkit-filter: grayscale(100%);  filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'matrix\' values=\'0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0\'/></filter></svg>#grayscale"); }
+.contrast {-webkit-filter: contrast(160%);}
+.brightness {-webkit-filter: brightness(0.25);}
+.blur {-webkit-filter: blur(3px);}
+.invert {-webkit-filter: invert(100%);}
+.sepia {-webkit-filter: sepia(100%);}
+.huerotate {-webkit-filter: hue-rotate(180deg);}
+.rss.opacity {-webkit-filter: opacity(50%);}
+
+
+
+/******************************************************************************************************************************************************************************
+* BOOSTRAP OVERRIDE
+******************************************************************************************************************************************************************************/
+ 
+/* Responsive Media Requests */
+
+	/* Large Desktops */
+	@media screen and ( max-width: 1680px ) {
+		html { font-size: 16px; }
+	}
+
+	/* UltraBooks & Tablets */
+	@media screen and ( max-width: 1366px ) {
+		html { font-size: 13px; }
+	}
+
+	/* Small Desktops & NetBooks */
+	@media screen and ( max-width: 1280px ) {
+		html { font-size: 12px; }
+	}
+
+	/* Ipads */
+	@media screen and ( max-width: 1024px ) {
+		html { font-size: 10px; }
+	}
+
+
+
+
+
+ 
+/******************************************************************************************************************************************************************************
+* GENERAL
+******************************************************************************************************************************************************************************/
+ 
+
+/* Generalities */
+h1 { font-family: 'Oswald',sans-serif,Serif; font-weight: bold; letter-spacing: -2px; border: none; color: #487a7b; width: auto; display:inline-block; }
+h2 { font-family: 'Nixie One', sans-serif, Serif; font-weight: bold; color: lightblue; }
+h3 { font-family: 'Cinzel','Nixie One', Serif; }
+h4 { font-family: 'Oswald','Nixie One', Serif; }
+.hidden { display: none; }
+
+
+/* Header */
+nav { display: inline-block; /*background: #1a1a1a; opacity: 0.8;*/text-align: left; min-width: 280px; width: 15%; height: 60px; position: fixed; z-index: 9999; }
+nav ul { list-style-type: none; }
+nav li { display: inline-block; margin-right: 30px; width: auto;}
+nav a {  color: white;text-decoration: none;  font-family: 'Oswald', Serif; }
+._dashed { border-bottom: 1px dotted #999; padding-bottom: 2px;  }
+nav a:hover { color: #259393; text-decoration: none;}
+
+#nav_trigger { display: block; cursor: pointer; position: absolute; top: 0; left:0; z-index: 2; background-color: #259393; height: 60px; width: 60px; border: none;
+ 		-webkit-transition: height 1s ease-in-out; -moz-transition: height 1s ease-in-out; -o-transition: height 1s ease-in-out; transition: height 1s ease-in-out; }
+
+#menu { position: absolute; top: 18px; left: 18px; margin: 0; padding: 0;
+		-webkit-transition: all .3s ease-in-out; -moz-transition: all .3s ease-in-out; -o-transition: all .3s ease-in-out; transition: all .3s ease-in-out; }
+
+.RightAngle { -webkit-transform:rotate(90deg); -moz-transform:rotate(90deg); -o-transform:rotate(90deg); transform:rotate(90deg); }
+
+#navmenu { padding: 0; margin: 0; height:60px;   }
+#dropdown { padding: 0; margin:0; height: 100%; }
+#dropdown li { padding: 0; margin-left: 60px; width: calc(100% - 60px); height: 100%; background: rgba(26,26,26,0.8);}
+#dropdown a { margin: 0 0 0 10%; font-size: 2em; font-size: 2rem; font-size: 34px;}
+.eph { margin-top: 10%; visibility: hidden; opacity: 0; 
+	   -webkit-transition: all 1s ease-out .2s; -moz-transition: all 1s ease-out .2s; -o-transition: all 1s ease-out .2s; transition: all 1s ease-out .2s; }
+
+.eph:hover {margin-left:80px!important;
+	-webkit-transition: margin-left 1s ease-out; -moz-transition: margin-left 1s ease-out; -o-transition: margin-left 1s ease-out; transition: margin-left 1s ease-out; } 
+
+
+/* Main Content */
+.over {  position: absolute; background: rgba(26,26,26,0.6); }
+.over h1 { font-family: 'Oswald',sans-serif,Serif; font-weight: bold; color: black; white-space: nowrap; width: auto; color: #259393;}
+.title { color : #259393; }
+
+
+
+
+/******************************************************************************************************************************************************************************
+* COVER
+******************************************************************************************************************************************************************************/
+
+
+#Home { position: relative; padding: 0; margin: 0; width: 100vw; max-width: 100%; height: 100vh; background: #1a1a1a url("../images/jpg/textures/blackplanks.jpg") center 0 no-repeat fixed; background-size: cover; }
+#OC { margin: 0; padding:0; position: absolute; top: 62px; border-top: 1px solid black; border-bottom: 1px solid black;}
+#Cover { padding: 10% 0 0 10% ;background: #1a1a1a url("../images/jpg/MR52/OculusVR.jpg"); background-size: cover;  height: 80; }

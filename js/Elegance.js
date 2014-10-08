@@ -16,6 +16,7 @@ $( document ).ready(function() {
  	/* Experiences */
  	calendar();
  	highlightpertinents(2010);
+ 	unveilCubeStyle();
 
  	$(window).bind('scroll', function(e) {
  		parallaxpourri();
@@ -168,16 +169,29 @@ function highlightpertinents( id ) {
 	});
 }
 
+function unveilCubeStyle() {
+	$( '#togglemode' ).click(function() {
+		$('#togglecursor').toggleClass("toggleft");
+		$('#togglecursor').toggleClass("toggleright");
+ 	}); 
+}
+
 function parallaxpourri() {
 	var scrolledY = $(window).scrollTop();
 	
 	$('#HeroBack').css('background-position','center -'+((scrolledY*0.2))+'px');
-	
-	$('#HeroProfil').css('background-position','center -'+((scrolledY*0.2))+'px');
-	$('#HeroProfil').css('top','-' + (scrolledY) +'px');
+	$('#OverBack').css('background-position','center -'+((scrolledY*0.8))+'px'); 
 
+	$('#HeroProfil').css('background-position','center -'+((scrolledY*0.2))+'px');
+
+	/* Figure out how to parallax without creating empty space */
+	//$('#HeroProfil').css('top','-' + (scrolledY) +'px');
+/*
 	$('#HeroTimeline').css('background-position','center -'+((scrolledY*0.2))+'px');
 	$('#HeroTimeline').css('top','-' + (scrolledY) +'px');
+*/
+	 
+
 
 	//$('#HeroTimeline').css('background-position','center -'+((scrolledY*0.2))+'px');
 	/*.css('top','-'+((scrolledY*0.5))+'px');*/
