@@ -135,7 +135,7 @@ function getEvent(id) {
 			}
 		}
 	}
-
+ 
 	$("#HeroTimeline .xpdetails").each(function() {
 		if( !($(this).hasClass('hidden')) )
 		{
@@ -171,9 +171,22 @@ function highlightpertinents( id ) {
 
 function unveilCubeStyle() {
 	$( '#togglemode' ).click(function() {
-		$('#togglecursor').toggleClass("toggleft");
+		$('#togglecursor').toggleClass("toggleleft");
 		$('#togglecursor').toggleClass("toggleright");
- 	}); 
+ 
+
+		if($('#togglecursor').hasClass("toggleleft"))
+		{
+			$('.cubecontainer').css('transform','initial');
+		}
+			 
+		if($('#togglecursor').hasClass("toggleright"))
+		{
+				$('.cubecontainer').css('transform','translateX(25em) rotateY(90deg)');
+		}
+
+			 
+ 	}); 	 
 }
 
 function parallaxpourri() {
