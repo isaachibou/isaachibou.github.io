@@ -170,23 +170,34 @@ function highlightpertinents( id ) {
 }
 
 function unveilCubeStyle() {
-	$( '#togglemode' ).click(function() {
-		$('#togglecursor').toggleClass("toggleleft");
-		$('#togglecursor').toggleClass("toggleright");
- 
+	
+	/* Cube Setup */
+	var w = $('#XPHop').width();
 
-		if($('#togglecursor').hasClass("toggleleft"))
+	 
+	$('#XPHop').css('transform','rotateY(-90deg) translateX('+-w+'px) ');
+
+	 
+
+	/* Cube Rotation Trigger */
+	$( '.togglemode' ).click(function() {
+		/* Button Animation*/
+		$('.togglecursor').toggleClass("toggleleft");
+		$('.togglecursor').toggleClass("toggleright");
+
+		/* Behaviour */
+		if( $('.togglecursor').hasClass("toggleright"))
 		{
-			$('.cubecontainer').css('transform','initial');
+			$('#XPCubeContainer').css('transform','translateX('+w/2+'px) rotateY(90deg)');
 		}
-			 
-		if($('#togglecursor').hasClass("toggleright"))
+		if( $('.togglecursor').hasClass("toggleleft"))
 		{
-				$('.cubecontainer').css('transform','translateX(25em) rotateY(90deg)');
+			$('#XPCubeContainer').css('transform','initial');
 		}
 
-			 
+
  	}); 	 
+
 }
 
 function parallaxpourri() {
