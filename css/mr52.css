@@ -11,6 +11,7 @@ html,body
 	margin: 0; 
 	width: 100vw; 
 	min-width: 320px; 
+	 max-width:100%;
 	min-height: 700px; 
 	height: 100vh; 
 	position: relative; 
@@ -124,6 +125,90 @@ nav a:hover { color: #259393; text-decoration: none;}
 ******************************************************************************************************************************************************************************/
 
 
-#Home { position: relative; padding: 0; margin: 0; width: 100vw; max-width: 100%; height: 100vh; background: #1a1a1a url("../images/jpg/textures/blackplanks.jpg") center 0 no-repeat fixed; background-size: cover; }
-#OC { margin: 0; padding:0; position: absolute; top: 62px; border-top: 1px solid black; border-bottom: 1px solid black;}
-#Cover { padding: 10% 0 0 10% ;background: #1a1a1a url("../images/jpg/MR52/OculusVR.jpg"); background-size: cover;  height: 80; }
+#Home { position: relative; padding: 0; margin: 0; width: 100vw; max-width: 100%; height: 100vh; border: 1px solid black; background: #1a1a1a center 0 no-repeat fixed; background-size: cover; }
+#OC { position: absolute; margin: 0; height: calc(100% - 60px); padding:0; position: absolute; top: 60px; border-top: 1px solid black; }
+
+#Homeover { padding-left: 55px; padding-top: 4%; position: absolute; height: 52%; border-bottom: 1px solid black; }
+#Homeover h1 { font-size: 12rem; margin: 0; padding: 0; color : #259393; }
+#Homeover h2 { font-size: 2.8rem; margin: 0; margin-left:5px; padding: 0; }
+
+/******************************************************************************************************************************************************************************
+* CONTENT
+******************************************************************************************************************************************************************************/
+.nest 
+{ 
+	position: relative;
+	padding: 5px; 
+	border: 1px solid orange;
+}
+
+ 
+.titletextnet 
+{  
+	display: block;
+	margin: 0 0 0 10px; 
+	background: #1a1a1a url("../images/jpg/textures/tapisserie.jpg") 27% 0%; 
+	border: 1px solid #487A7B; 
+}
+
+.imnet
+{
+	padding: 0;
+	margin: 5px 0 0 5px;
+	border: 1px solid #487A7B; 	
+}
+
+.legnet
+{
+	padding: 5px; 
+	margin: 5px 0 0 5px; 
+	height: 100%;
+	background: rgba(26,26,26,0.8) 27% 0%; 
+	font-family: "Trykker",serif; 
+	font-size: 1.3rem;  
+	border: 1px solid #487A7B; 	
+	text-align: center;
+}
+
+.imnet img
+{
+	height: 100%;
+	width: 100%;
+}
+
+
+.textnet 
+{ 
+	padding: 5px;  
+	height: 100%;
+	background: rgba(26,26,26,0.8) 27% 0%; 
+	font-family: "Nixie One",serif; 
+	border: 1px solid #487A7B; 	
+}
+
+.textnet p 
+{ 
+	padding: 0; 
+	margin: 0 0 1% 0 ; 
+	font-size: 1.3rem;  
+} 
+
+
+#Intro 
+{
+	position: relative; 
+	padding: 60px 60px 0 50px; 
+	margin: 0; width: 100vw; 
+	max-width: 100%; 
+	height: 200vh; 
+	background: #1a1a1a url("../images/jpg/textures/blackplanks.jpg") center 0 no-repeat fixed; 
+	background-size: cover; 
+	border-top: 1px solid black;
+	color : #E0E6F8; 
+}
+
+#Intro h1 
+{ 
+	margin:0; 
+	font-size: 6rem; 
+}
