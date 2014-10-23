@@ -154,14 +154,13 @@ nav a:hover { color: #259393; text-decoration: none;}
 .imnet
 {
 	padding: 0;
-	margin: 5px 0 0 5px;
 	border: 1px solid #487A7B; 	
 }
 
 .legnet
 {
 	padding: 5px; 
-	margin: 5px 0 0 5px; 
+	margin: 5px 0 0 0; 
 	height: 100%;
 	background: rgba(26,26,26,0.8) 27% 0%; 
 	font-family: "Trykker",serif; 
