@@ -15,10 +15,7 @@ html,body
 	min-width: 320px; 
 	min-height: 700px; 
 	height: 100vh; 
-	position: relative; 
-
- 
-	 
+	position: relative; 	 
 }
 
 .hidden { visibility: hidden; display: none; }
@@ -44,10 +41,8 @@ html,body
 
 
 /******************************************************************************************************************************************************************************
-* BOOSTRAP OVERRIDE
+* RESPONSIVE MEDIA REQUESTS
 ******************************************************************************************************************************************************************************/
- 
-/* Responsive Media Requests */
 
 	/* Large Desktops */
 	@media screen and ( max-width: 1680px ) {
@@ -71,9 +66,6 @@ html,body
 
 
 
-
-
- 
 /******************************************************************************************************************************************************************************
 * GENERAL
 ******************************************************************************************************************************************************************************/
@@ -84,42 +76,170 @@ h1 { font-family: 'Oswald',sans-serif,Serif; font-weight: bold; letter-spacing: 
 h2 { font-family: 'Nixie One', sans-serif, Serif; font-weight: bold; color: lightblue; }
 h3 { font-family: 'Cinzel','Nixie One', Serif; }
 h4 { font-family: 'Oswald','Nixie One', Serif; }
+
 .hidden { display: none; }
 
 
 /* Header */
-nav { display: inline-block; /*background: #1a1a1a; opacity: 0.8;*/text-align: left; min-width: 280px; width: 15%; height: 60px; position: fixed; z-index: 9999; }
-nav ul { list-style-type: none; }
-nav li { display: inline-block; margin-right: 30px; width: auto;}
-nav a {  color: white;text-decoration: none;  font-family: 'Oswald', Serif; }
-._dashed { border-bottom: 1px dotted #999; padding-bottom: 2px;  }
-nav a:hover { color: #336699; text-decoration: none;}
+nav 
+{ 
+	display: inline-block;
+	position: fixed; 
+	/*background: #1a1a1a; opacity: 0.8;*/
+	min-width: 280px; 
+	width: 15%; 
+	height: 60px;
+	text-align: left;  
+	z-index: 9999; 
+}
 
-#nav_trigger { display: block; cursor: pointer; position: absolute; top: 0; left:0; z-index: 2; background-color: #336699; height: 60px; width: 60px; border: none;
- 		-webkit-transition: height 1s ease-in-out; -moz-transition: height 1s ease-in-out; -o-transition: height 1s ease-in-out; transition: height 1s ease-in-out; }
+nav ul 
+{ 
+	list-style-type: none; 
+}
 
-#menu { position: absolute; top: 18px; left: 18px; margin: 0; padding: 0;
-		-webkit-transition: all .3s ease-in-out; -moz-transition: all .3s ease-in-out; -o-transition: all .3s ease-in-out; transition: all .3s ease-in-out; }
+nav li 
+{ 
+	display: inline-block; 
+	margin-right: 30px; 
+	width: auto;
+}
 
-.RightAngle { -webkit-transform:rotate(90deg); -moz-transform:rotate(90deg); -o-transform:rotate(90deg); transform:rotate(90deg); }
+nav a {  
+	color: white;
+	text-decoration: none;  
+	font-family: 'Oswald', Serif;
+}
 
-#navmenu { padding: 0; margin: 0; height:60px;   }
-#dropdown { padding: 0; margin:0; height: 100%; }
-#dropdown li { padding: 0; margin-left: 60px; width: calc(100% - 60px); height: 100%; background: rgba(26,26,26,0.8);}
-#dropdown a { margin: 0 0 0 10%; font-size: 2em; font-size: 2rem; font-size: 34px;}
-.eph { margin-top: 10%; visibility: hidden; opacity: 0; 
-	   -webkit-transition: all 1s ease-out .2s; -moz-transition: all 1s ease-out .2s; -o-transition: all 1s ease-out .2s; transition: all 1s ease-out .2s; }
+nav a:hover 
+{ 
+	color: #336699; 
+	text-decoration: none;
+}
 
-.eph:hover {margin-left:80px!important;
-	-webkit-transition: margin-left 1s ease-out; -moz-transition: margin-left 1s ease-out; -o-transition: margin-left 1s ease-out; transition: margin-left 1s ease-out; } 
+._dashed { 
+	border-bottom: 1px dotted #999;
+	padding-bottom: 2px;  
+}
+
+#nav_trigger 
+{ 
+	display: block; 
+	cursor: pointer; 
+	position: absolute; 
+	top: 0; 
+	left:0;
+	height: 60px; 
+	width: 60px;
+	z-index: 2; 
+	background-color: #336699; 
+	border: none;
+ 	
+ 	-webkit-transition: height 1s ease-in-out; 
+ 	-moz-transition: height 1s ease-in-out; 
+ 	-o-transition: height 1s ease-in-out; 
+ 	transition: height 1s ease-in-out; 
+}
+
+#menu 
+{ 
+	margin: 0; 
+	padding: 0;
+	position: absolute; 
+	top: 18px; 
+	left: 18px; 
+	
+	-webkit-transition: all .3s ease-in-out; 
+	-moz-transition: all .3s ease-in-out; 
+	-o-transition: all .3s ease-in-out; 
+	transition: all .3s ease-in-out; 
+}
+
+.RightAngle 
+{ 
+	-webkit-transform:rotate(90deg); 
+	-moz-transform:rotate(90deg); 
+	-o-transform:rotate(90deg); 
+	transform:rotate(90deg); 
+}
+
+#navmenu 
+{ 
+	padding: 0; 
+	margin: 0; 
+	height:60px;   
+}
+
+#dropdown 
+{ 
+	padding: 0; 
+	margin:0; 
+	height: 100%; 
+}
+
+#dropdown li 
+{ 
+	padding: 0; 
+	margin-left: 60px; 
+	width: calc(100% - 60px); 
+	height: 100%; 
+	background: rgba(26,26,26,0.8);
+}
+
+#dropdown a 
+{ 
+	margin: 0 0 0 10%; 
+	font-size: 2em; 
+	font-size: 2rem; 
+	font-size: 34px;
+}
+
+.eph 
+{ 
+	margin-top: 10%;
+	visibility: hidden; 
+	opacity: 0; 
+
+	-webkit-transition: all 1s ease-out .2s; 
+	-moz-transition: all 1s ease-out .2s; 
+	-o-transition: all 1s ease-out .2s; 
+	transition: all 1s ease-out .2s; 
+}
+
+.eph:hover 
+{ 
+	margin-left:80px!important;
+
+	-webkit-transition: margin-left 1s ease-out; 
+	-moz-transition: margin-left 1s ease-out; 
+	-o-transition: margin-left 1s ease-out; 
+	transition: margin-left 1s ease-out; 
+} 
 
 
 /* Main Content */
-.over { margin: 0; padding: 0; position: absolute; background: rgba(26,26,26,0.6); }
-.over h1 {  font-family: 'Oswald',sans-serif,Serif; font-weight: bold; color: black; white-space: nowrap; width: auto; color: #336699;}
-.title {      color : #336699; }
+.over 
+{ 
+	margin: 0; 
+	padding: 0; 
+	position: absolute; 
+	background: rgba(26,26,26,0.6); 
+}
 
+.over h1 
+{  
+	font-family: 'Oswald',sans-serif,Serif;
+	font-weight: bold; 
+	color: black;
+	white-space: nowrap; 
+	width: auto; 
+	color: #336699;
+}
 
+.title 
+{      
+	color : #336699; 
+}
 
 
 
@@ -129,14 +249,64 @@ nav a:hover { color: #336699; text-decoration: none;}
 
 
 
-#HeroBack { position: relative; padding: 0; margin: 0; width: 100vw; max-width: 100%; height: 100vh; background: #1a1a1a url("../images/jpg/MM&I/Hero/Back.jpg") center 0 no-repeat fixed; background-size: cover; }
-#OverBack { display: inline; height: 50%; width: 0%; bottom: 25%; 
-			-webkit-transition: width 1s linear; -moz-transition: width 1s linear; -o-transition: width 1s linear; transition: width 1s linear; } 
-#OverBack h3 { color: lightgrey; }
+#HeroBack 
+{ 
+	padding: 0; 
+	margin: 0; 
+	position: relative; 
+	width: 100vw; 
+	max-width: 100%; 
+	height: 100vh; 
+	background: #1a1a1a url("../images/jpg/MM&I/Hero/Back.jpg") center 0 no-repeat fixed; 
+	background-size: cover; 
+}
 
-#name { margin: 2% 0 0 10%; font-size:9vw; font-size: 10rem; padding: 0; border: none; white-space: nowrap; }
-#intro { margin: 0% 0 0 10%; font-size: 3.7vw; font-size: 3.8rem; white-space: nowrap;   }
-#title { margin: 3% 0 0 10.5%; white-space: nowrap; font-size: 3.5vw; font-size: 3.7rem; display: inline-block; border-top: 1px solid; border-top: 2px solid #808080; padding-top: 29px; }
+#OverBack 
+{ 
+	display: inline; 
+	height: 50%; 
+	width: 0%; 
+	bottom: 25%; 
+
+	-webkit-transition: width 1s linear; 
+	-moz-transition: width 1s linear; 
+	-o-transition: width 1s linear; 
+	transition: width 1s linear; 
+}
+
+#OverBack h3 
+{ 
+	color: lightgrey; 
+}
+
+#name 
+{ 
+	margin: 2% 0 0 10%; 
+	font-size:9vw; 
+	font-size: 10rem; 
+	padding: 0; 
+	border: none; 
+	white-space: nowrap; 
+}
+
+#intro 
+{ 
+	margin: 0% 0 0 10%; 
+	font-size: 3.7vw; 
+	font-size: 3.8rem; 
+	white-space: nowrap;   
+}
+
+#title 
+{ 
+	margin: 3% 0 0 10.5%;
+	white-space: nowrap; 
+	font-size: 3.5vw; 
+	font-size: 3.7rem; 
+	display: inline-block;  
+	border-top: 2px solid #808080; 
+	padding-top: 29px; 
+}
 
 
 
@@ -147,16 +317,70 @@ nav a:hover { color: #336699; text-decoration: none;}
 
 
 
-#HeroProfil { position: relative; padding: 0; margin: 0; width: 100vw; max-width: 100%; height: 100vh; background: #1a1a1a url("../images/jpg/MM&I/Hero/ProfilSoleilBois.jpg") center 0 no-repeat fixed; background-size: cover; }
-#OverProfil { background: rgba(26,26,26,0.8); padding: 0; margin: 0; height: 100%; width: 50%; right: 0px; background: rgba(26,26,26,0.82);
-			  }
-#OverBlur {  padding: 5% 5%; margin: 0; position: absolute; left: 50%; height:100%; width:50%; overflow: hidden;}
-#OverBlur h1 { margin: 0; white-space: nowrap; font-size: 7.5vw; font-size: 8.1rem; }
-#OverBlur h2 { margin: 0; white-space: nowrap; font-size: 2.9vw; font-size: 3.15rem;}
-#OverBlur h4 { margin: 8% 0 0 0; font-size: 5vmin; font-size: 3rem; }
-#OverBlur p { font-family: "Nixie One"; color: white; font-size: 1.5em; font-size: 1.55rem;}
+#HeroProfil 
+{ 
+	padding: 0; 
+	margin: 0; 
+	position: relative; 
+	width: 100vw; 
+	max-width: 100%; 
+	height: 100vh; 
+	background: #1a1a1a url("../images/jpg/MM&I/Hero/ProfilSoleilBois.jpg") center 0 no-repeat fixed; 
+	background-size: cover; 
+}
 
+#OverProfil 
+{ 
+	background: rgba(26,26,26,0.8); 
+	padding: 0; 
+	margin: 0; 
+	height: 100%; 
+	width: 50%; 
+	right: 0px; 
+	background: rgba(26,26,26,0.82);
+}
 
+#OverBlur 
+{  
+	padding: 5% 5%; 
+	margin: 0; 
+	position: absolute; 
+	left: 50%; 
+	height:100%; 
+	width:50%; 
+	overflow: hidden;
+}
+
+#OverBlur h1 
+{ 
+	margin: 0; 
+	white-space: nowrap; 
+	font-size: 7.5vw; 
+	font-size: 8.1rem; 
+}
+
+#OverBlur h2 
+{ 
+	margin: 0; 
+	white-space: nowrap; 
+	font-size: 2.9vw; 
+	font-size: 3.15rem;
+}
+
+#OverBlur h4 
+{ 
+	margin: 8% 0 0 0; 
+	font-size: 5vmin; 
+	font-size: 3rem; 
+}
+
+#OverBlur p 
+{
+	font-family: "Nixie One"; 
+ 	color: white;
+ 	font-size: 1.5em; 
+ 	font-size: 1.55rem;
+}
 
 
 /******************************************************************************************************************************************************************************
@@ -164,84 +388,392 @@ nav a:hover { color: #336699; text-decoration: none;}
 ******************************************************************************************************************************************************************************/
 
 
+#HeroTimeline 
+{ 
+	padding: 0; 
+	margin: 0;
+	position: relative;  
+	width: 100vw; 
+	max-width: 100%; 	
+	height: 100vh; 
+	background: url('../images/jpg/textures/tapisserie.jpg') center 0 no-repeat fixed; /* background-size: cover;*/  
+}
 
-#HeroTimeline { position: relative; padding: 0; margin: 0; width: 100vw; max-width: 100%; height: 100vh; background: url('../images/jpg/textures/tapisserie.jpg') center 0 no-repeat fixed; /* background-size: cover;*/  } 
-#XP { position: absolute; top: 0%; left: 27%; color: white; font-size: 5rem; color: rgb(51,102,153); }
+#XP 
+{ 
+	position: absolute; 
+	top: 0%; 
+	left: 27%; 
+	color: white; 
+	font-size: 5rem; 
+	color: rgb(51,102,153); 
+}
 
 
 /******************* Years *******************/
-#Years { position: absolute; top: 23%; min-width: 100px; list-style: none; padding: 0; border-right: 1px solid #FFF; }
-.year { margin-top: 5%; width: 56%; text-align: right; color: #FFF; font-family:  'Nixie One', Serif;  font-size: 1rem;  border-bottom: 1px solid #AAA; cursor: pointer;
-		-webkit-transition: font-size .2s ease-in-out; -moz-transition: font-size .2s ease-in-out; -o-transition: font-size .2s ease-in-out; transition: font-size .2s ease-in-out;
-		-webkit-transition: width .5s ease-in-out; -moz-transition: width .5s ease-in-out; -o-transition: width .5s ease-in-out; transition: width .5s ease-in-out; 
+#Years 
+{ 
+	position: absolute; 
+	top: 23%; 
+	min-width: 100px; 
+	list-style: none; 
+	padding: 0; 
+	border-right: 1px solid #FFF; 
 }
-.year:hover { padding: 0 5% 0 0; color: #FFF; width: 100%; font-size: 3rem; border-bottom: 1px solid #FFF;  font-family: 'Oswald','Nixie One', Serif;
-		   	   -webkit-transition: all .2s ease-in-out; -moz-transition: all .2s ease-in-out; -o-transition: all .2s ease-in-out; transition: all .2s ease-in-out; 
+
+.year { 
+	margin-top: 5%;
+	width: 56%;
+	text-align: right; color: #FFF;
+	font-family:  'Nixie One', Serif;  
+	font-size: 1rem;  
+	border-bottom: 1px solid #AAA; 
+	cursor: pointer;
+	
+	-webkit-transition: font-size .2s ease-in-out; 
+	-moz-transition: font-size .2s ease-in-out; 
+	-o-transition: font-size .2s ease-in-out; 
+	transition: font-size .2s ease-in-out;
+	
+	-webkit-transition: width .5s ease-in-out; 
+	-moz-transition: width .5s ease-in-out; 
+	-o-transition: width .5s ease-in-out; 
+	transition: width .5s ease-in-out; 
 }
-.datyear { padding: 0 5% 0 0; color: #336699; width: 100%; font-size: 3rem; border-bottom: 1px solid #FFF; font-family: 'Oswald','Nixie One', Serif;
-		   -webkit-transition: font-size .2s ease-in-out; -moz-transition: font-size .2s ease-in-out; -o-transition: font-size .2s ease-in-out; transition: font-size .2s ease-in-out; 
+
+.year:hover 
+{ 	
+	padding: 0 5% 0 0; 
+	color: #FFF; 
+	width: 100%; 
+	font-size: 3rem; 
+	border-bottom: 1px solid #FFF;  
+	font-family: 'Oswald','Nixie One', Serif;
+		   	   
+	-webkit-transition: all .2s ease-in-out; 
+	-moz-transition: all .2s ease-in-out; 
+	-o-transition: all .2s ease-in-out; 
+	transition: all .2s ease-in-out; 
+}
+
+.datyear 
+{ 
+	padding: 0 5% 0 0; 
+	color: #336699; 
+	width: 100%; 
+	font-size: 3rem; 
+	border-bottom: 1px solid #FFF; 
+	font-family: 'Oswald','Nixie One', Serif;
+
+ 	-webkit-transition: font-size .2s ease-in-out; 
+	-moz-transition: font-size .2s ease-in-out; 
+	-o-transition: font-size .2s ease-in-out; 
+ 	transition: font-size .2s ease-in-out; 
 }
  
 
 /******************* Months *******************/
-#Months { padding: 0 0 0 1%;  position: absolute; min-width: 260px; left: 1%; top: 15%; height: auto; list-style: none; border-left: 1px solid #FFF; font-family:  'Nixie One', Serif; 
-		  -webkit-transition: font-size .2s ease-in-out; -moz-transition: font-size .2s ease-in-out; -o-transition: font-size .2s ease-in-out; transition: font-size .2s ease-in-out; 
+#Months 
+{ 
+	padding: 0 0 0 1%;
+	position: absolute; min-width: 260px; 
+	left: 1%; 
+	top: 15%; 
+	height: auto; 
+	list-style: none; border-left: 1px solid #FFF; 
+	font-family:  'Nixie One', Serif; 
+	
+	-webkit-transition: font-size .2s ease-in-out;
+	-moz-transition: font-size .2s ease-in-out; 
+	-o-transition: font-size .2s ease-in-out; 
+	transition: font-size .2s ease-in-out; 
 }
-.month {  padding: 0 0 0 1%;text-align: left; color: #FFF; font-size: 2rem; cursor: pointer; width: 70%;
-		-webkit-transition: font-size .2s ease-in-out; -moz-transition: font-size .2s ease-in-out; -o-transition: font-size .2s ease-in-out; transition: font-size .2s ease-in-out;
+
+.month 
+{  
+	padding: 0 0 0 1%;
+	text-align: left; color: #FFF; 
+	font-size: 2rem; 
+	cursor: pointer; 
+	width: 70%;
+	
+	-webkit-transition: font-size .2s ease-in-out; 
+	-moz-transition: font-size .2s ease-in-out; 
+	-o-transition: font-size .2s ease-in-out; 
+	transition: font-size .2s ease-in-out;
 }
-.pertinentmonth { font-family: 'Jura','Nixie One', Serif; font-size: 3rem; color: #FFF; border-right: 1px solid white;
-	       		 -webkit-transition: all .2s ease-in-out; -moz-transition: all .2s ease-in-out; -o-transition: all .2s ease-in-out; transition: all .2s ease-in-out;     		 
+
+.pertinentmonth 
+{ 
+	font-family: 'Jura','Nixie One', Serif; 
+	font-size: 3rem; 
+	color: #FFF; 
+	border-right: 1px solid white;
+	
+	-webkit-transition: all .2s ease-in-out; 
+	-moz-transition: all .2s ease-in-out; 
+	-o-transition: all .2s ease-in-out; 
+	transition: all .2s ease-in-out;     		 
 }
-.pertinentmonth:hover { font-family: 'Jura','Nixie One', Serif; font-size: 4rem; color: #FFF; 
-	        -webkit-transition: all .2s ease-in-out; -moz-transition: all .2s ease-in-out; -o-transition: all .2s ease-in-out; transition: all .2s ease-in-out; 
+
+.pertinentmonth:hover 
+{ 
+	font-family: 'Jura','Nixie One', Serif; 
+	font-size: 4rem;
+	color: #FFF; 
+	
+	-webkit-transition: all .2s ease-in-out; 
+	-moz-transition: all .2s ease-in-out; 
+	-o-transition: all .2s ease-in-out; 
+	transition: all .2s ease-in-out; 
 }
-.datmonth { font-weight: bold; font-family: 'Jura','Nixie One', Serif; font-size: 4rem; color: #336699; width: 88%;   border-right: 1px solid white;
-	        -webkit-transition: all .2s ease-in-out; -moz-transition: all .2s ease-in-out; -o-transition: all .2s ease-in-out; transition: all .2s ease-in-out; 
+
+.datmonth 
+{ 
+	font-weight: bold; font-family: 'Jura','Nixie One', Serif; 
+	font-size: 4rem; color: #336699; width: 88%;   
+	border-right: 1px solid white;
+
+	-webkit-transition: all .2s ease-in-out; 
+	-moz-transition: all .2s ease-in-out; 
+	-o-transition: all .2s ease-in-out; 
+	transition: all .2s ease-in-out; 
 }
-.dismonth { font-family: 'Jura','Nixie One', Serif; font-size: 4rem; color: #FFF; 
-	        -webkit-transition: all .2s ease-in-out; -moz-transition: all .2s ease-in-out; -o-transition: all .2s ease-in-out; transition: all .2s ease-in-out; 
+
+.dismonth 
+{ 
+	font-family: 'Jura','Nixie One', Serif; 
+	font-size: 4rem; color: #FFF; 
+	        
+	-webkit-transition: all .2s ease-in-out; 
+	-moz-transition: all .2s ease-in-out; 
+	-o-transition: all .2s ease-in-out; 
+	transition: all .2s ease-in-out; 
 }
-.demmonths { padding-left: 20%;  font-weight: bold; font-family: 'Jura','Nixie One', Serif; font-size: 2.5rem; color: #336699 ; width: 88%;  border-right: 1px solid white;
-			 -webkit-transition: all .2s ease-in-out; -moz-transition: all .2s ease-in-out; -o-transition: all .2s ease-in-out; transition: all .2s ease-in-out; 
+
+.demmonths { 
+	padding-left: 20%;  
+	font-weight: bold; 
+	font-family: 'Jura','Nixie One', Serif; 
+	font-size: 2.5rem; 
+	color: #336699 ; 
+	width: 88%;  
+	border-right: 1px solid white;
+	
+	-webkit-transition: all .2s ease-in-out; 
+	-moz-transition: all .2s ease-in-out; 
+	-o-transition: all .2s ease-in-out; 
+	transition: all .2s ease-in-out; 
 }
  
 /******************* Cube It *******************/
 #Pane { padding: 0; position: absolute;   height:100%; }
-#XPCubeContainer {  padding: 0; position: absolute; height: 100%;  	transform-style: preserve-3d; 
-				   -webkit-transition: transform 1s ease-in-out; moz-transition: transform 1s ease-in; -o-transition: transform 1s ease-in; transition: transform 1s ease-in;
+
+#XPCubeContainer 
+{  
+	padding: 0; 
+	position: absolute; 
+	height: 100%;  	
+
+	transform-style: preserve-3d; 
+
+	-webkit-transition: transform 1s ease-out;
+	moz-transition: transform 1s ease-out;
+	-o-transition: transform 1s ease-out;
+	transition: transform 1s ease-out;
 }
-#XPSlider { padding: 0; position: relative; top: 5%; height: 90%; transform-style: preserve-3d; transition: transform 0.5s ease; }
-#XPHip { position: absolute; height: 100%; border-left:1px solid white;}
-#XPHop { position: absolute; height: 100%; transform-origin: center left; border-right:1px solid white; }
 
- 
-/******************* Contents *******************/
- 
+#XPSlider 
+{ 
+	padding: 0;
+	position: relative;
+	top: 5%;
+	height: 90%; 
 
-.togglemode { position: absolute; top: 85%; left: 8%; height: 5%; width: 8%; border: 1px solid white; z-index:999; }
-.togglecursor { position: absolute; top:5%;   background: white; height: 90%; width: 33%; } 
-.toggleleft { left:2.5%; right: auto; -webkit-transition: all 1s ease-in-out; -moz-transition: all 1s ease-in-out; -o-transition: all 1s ease-in-out; transition: all 1s ease-in-out; }
-.toggleright { left: auto; right: 2.5%; -webkit-transition: all 1s ease-in-out; -moz-transition: all 1s ease-in-out; -o-transition: all 1s ease-in-out; transition: all 1s ease-in-out; }
+	transform-style: preserve-3d; 
 
- 
+	transition: transform 0.5s ease; 
+}
 
-/******************* Del Bor *******************/
-.xpcover { z-index :800; padding: 0 0 0 2%; margin: 0; position: absolute; height: 100%; border-left: 1px solid #FFF; background: rgba(52,100,153,0.5); 
-		   -webkit-transition: all 1s ease 2s; -moz-transition: all 1s ease .2s; -o-transition: all 1s ease .2s; transition: all 1s ease .2s; 
+#XPHip 
+{
+	position: absolute; 
+	height: 100%; 
+	border-left:1px solid white;
+	background: rgba(26,26,26,0.75);  
+}
+
+#XPHop 
+{ 
+	position: absolute; 
+	height: 100%; 
+	border-right:1px solid white;
+
+	transform-origin: center left; 
+	background: rgba(26,26,26,0.75);  
+}
+
+
+.togglemode 
+{ 
+	position: absolute; 
+	top: 90%; 
+	left: 3%; 
+	height: 5%; 
+	width: 8%; 
+	border: 1px solid white; 
+	z-index:999; 
+}
+
+.togglecursor 
+{ 
+	position: absolute; 
+	top:5%;   
+	background: white; 
+	height: 90%; 
+	width: 33%;
+}
+
+.toggleleft 
+{ 
+	left:2.5%; 
+	right: auto; 
+
+	-webkit-transition: all 1s ease-in-out; 
+	-moz-transition: all 1s ease-in-out; 
+	-o-transition: all 1s ease-in-out; 
+	transition: all 1s ease-in-out; 
+}
+
+.toggleright 
+{ 
+	left: auto; 
+	right: 2.5%; 
+
+	-webkit-transition: all 1s ease-in-out; 
+	-moz-transition: all 1s ease-in-out; 
+	-o-transition: all 1s ease-in-out; 
+	transition: all 1s ease-in-out; 
+}
+
+/******************* Content *******************/
+.xpheader 
+{
+	padding-left: 1.5%;
+	position: absolute;
+	width: 97%;
+	font-family: 'Oswald',sans-serif,Serif; 
+	font-weight: bold; 
+	font-size: 5rem;
+	letter-spacing: -2px; 
+	color: #336699;
+	border-bottom: 1px solid white;
+
+}
+
+.xpcover
+{
+	padding: 0;
+	position: absolute;
+	top: 16%;
+	left: 2%;
+	height: 60%;
+	width: 95%;
+	font-size: 1.5rem;
+	color: orange;
+}
+
+.xpcover img
+{
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+}
+
+
+.place 
+{
+	position: absolute;
+	top: 15%;
+	left: 3%;
+	height: 60%;
+	width: 80%;
+	border-left: 5px solid #336699; 
+}
+
+.etq 
+{
+	position: absolute;
+	top: 10%;
+	right: 5%;
+	border: 1px solid lightblue;
+	z-index: 998;
+
 }
  
-.xpdetails { position: absolute; padding: 0 0 0 5%; height: 100%; border-left: 1px solid #FFF;  
- 			 -webkit-transition: all 1s ease 2s; -moz-transition: all 1s ease .2s; -o-transition: all 1s ease .2s; transition: all 1s ease .2s;
- }
 
-.etq { height: 100%; width: 100%; border-left: 5px solid #336699; }
-.locationLabel { z-index :998; padding: 0 0 0 2%; min-height: 90px; height: 25%; min-width: 300px; width: 65%; position: absolute; top: 5%; right: 0%; color: #336699; font-size: 3.5rem!important; font-family: 'Oswald', 'Nixie One', sans-serif; background: rgba(26,26,26,0.8); }
-.eventLabel { position: absolute;  top: 48%; left: 15%; margin: 0; padding: 0; font-family: 'Oswald','Nixie One', Serif; color: lightblue; font-size: 1.8rem; }
-.periodLabel { position: absolute;  top: 70%; left: 15%; margin: 0; padding: 0 ;font-family: 'Oswald','Nixie One', Serif; color: #FFF ; font-size: 1.6rem; }
-#bac { height: 40%; width: 80%; }
+.lbl 
+{ 
+	padding: 0.5%;    
+	z-index :999;
+	color: #336699; 
+	font-size: 2rem; 
+	font-family: 'Oswald', 'Nixie One', sans-serif;
+	background: rgba(26,26,26,0.8);  
+}
 
+.xpdetails 
+{
+	position: absolute;
+	left: 5%;
+	top: 5%;
+	height: 80%;
+	width: 90%;
 
+}
+
+.xpdetails h1
+{
+	left: 0;
+	font-size: 5.2rem;
+}
+
+.xpdetails h2 
+{
+	white-space: nowrap;
+	letter-spacing: 1px;
+	margin: 0;
+	font-size: 3rem;
+}
+
+.xpdetails p 
+{
+	font-family: "Jura";
+	margin: 3% 0 0 0;	
+	color: #FFF;
+	font-size: 2rem;
+}
+
+.xpdetails span 
+{
+	color: #336699;
+	font-weight: bold;
+}
+
+.xpdetails article
+{
+	font-family: "Jura";
+	color: #336699;
+	font-size: 2.2rem;
+
+}
+
+.xpdetails img 
+{
+	border-left: 5px solid #336199; 
+}
 
 
 
@@ -251,9 +783,17 @@ nav a:hover { color: #336699; text-decoration: none;}
 ******************************************************************************************************************************************************************************/
 
 
-
-#HeroSkills {  position: relative; padding: 0; margin: 0; width: 100vw; max-width: 100%; height: 100vh; background: url('../images/jpg/textures/blackfabric.jpg') center 0 no-repeat fixed; background-size: cover; } 
-
+#HeroSkills 
+{  
+	padding: 0; 
+	margin: 0; 
+	position: relative; 
+	width: 100vw; 
+	max-width: 100%; 
+	height: 100vh; 
+	background: url('../images/jpg/textures/blackfabric.jpg') center 0 no-repeat fixed; 
+	background-size: cover; 
+} 
 
 
 

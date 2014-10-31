@@ -7,27 +7,25 @@ $( document ).ready(function() {
 
 	/* Animations */
 	welcome();
-	
+	unveilCubeStyle();
+
+ 	$(window).bind('scroll', function(e) {
+ 		parallaxpourri();
+ 	});
+ 	
+});
+
+
+function welcome() {
+
 	/* Nav Develop on click */
 	$( '#nav_trigger' ).click(function() {
 		handleMenu();
 	}); 
 
- 	/* Experiences */
- 	calendar();
- 	highlightpertinents(2010);
- 	unveilCubeStyle();
-
- 	$(window).bind('scroll', function(e) {
- 		parallaxpourri();
- 	});
- 	 
-});
-
-
-function welcome() {
 	$('#OverBack').css('width','74%');
 	$('#OverBack').css('left','26%');
+
 }
 
 function handleMenu() {
@@ -76,97 +74,8 @@ function foldMenu() {
 	});
 }
 
-function calendar() {
-	/* Years */
- 	$( '#Years .year' ).click(function() {
- 		 
- 		id = $(this).attr('id').substring(2,6);
- 		$(this).toggleClass('datyear');
- 		highlightpertinents(id);
- 	});
-
- 	/* Months */
- 	$( '#Months .month' ).click(function() {
- 		 $('#Months .month').each(function() {
- 			if( $(this).hasClass('datmonth') )
- 			{
- 				$(this).toggleClass('datmonth');
- 			}
- 			if( $(this).hasClass('demmonths') )
- 			{
- 				$(this).toggleClass('demmonths');
- 			}
- 		});
-
- 		if( $(this).hasClass('pertinentmonth') )
- 		{
- 			$(this).toggleClass('datmonth');
- 		}
-
- 		$('#Years .year').each(function() {
-		 	if( $(this).hasClass('datyear') )
-		 	{
-		 	 	id = $(this).attr('id').substring(2,6);
-		 	}
- 		});
-
-	 	id = id + $(this).attr('id');
-	 	getEvent(id);
- 	});
-}
-
-function getEvent(id) {
-	var k = id.substring(4,7);
-	var s = parseInt(k.substring(1,3));
-	var iddef;	 
-
-	for( var j=s+1; j<13; j++)
-	{
-		if(j < 10) {
-			if( $('#'+id+'m'+'0'+j ).length != 0) {
-				iddef = id+'m'+'0'+j;
-				break;
-			}
-		}
-		else {
-			if( $('#'+id+'m'+j ).length != 0) {
-				iddef = id+'m'+j;
-				break;
-			}
-		}
-	}
- 
-	$("#HeroTimeline .xpdetails").each(function() {
-		if( !($(this).hasClass('hidden')) )
-		{
-			$(this).toggleClass('hidden');
-		}
-	});
-
-	$('#'+ iddef).toggleClass("hidden");
-
-	var e = iddef.substring(8,10);
-	e = parseInt(e);
-
-	for(j=s; j<e+1; j++)
-	{
-		if(j < 10) { $('#' + 'm' +'0' +j).toggleClass('demmonths'); }
-		else { $('#' + 'm' +j).toggleClass('demmonths'); }
-	}
-}
-
-function highlightpertinents( id ) {
-	$("#HeroTimeline .xpdetails").each(function() {
-		if( $(this).attr('id').substring(0,4) == id )
-		{
-			var per = $(this).attr('id').substring(4,7);
-
-			if( !($('#'+ per).hasClass('pertinentmonth')) )
-			{
-				$('#' + per).toggleClass('pertinentmonth');
-			}
-		}
-	});
+function timeline() {
+	
 }
 
 function unveilCubeStyle() {
@@ -176,8 +85,6 @@ function unveilCubeStyle() {
 
 	 
 	$('#XPHop').css('transform','rotateY(-90deg) translateX('+-w+'px) ');
-
-	 
 
 	/* Cube Rotation Trigger */
 	$( '.togglemode' ).click(function() {
@@ -197,9 +104,9 @@ function unveilCubeStyle() {
 
 
  	}); 	 
-
 }
 
+ 
 function parallaxpourri() {
 	var scrolledY = $(window).scrollTop();
 	
