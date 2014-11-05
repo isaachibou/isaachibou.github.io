@@ -301,8 +301,7 @@ nav a:hover
 { 
 	margin: 3% 0 0 10.5%;
 	white-space: nowrap; 
-	font-size: 3.5vw; 
-	font-size: 3.7rem; 
+	font-size: 3.5vw;  
 	display: inline-block;  
 	border-top: 2px solid #808080; 
 	padding-top: 29px; 
@@ -587,8 +586,9 @@ nav a:hover
 { 
 	padding: 0;
 	position: relative;
-	top: 5%;
-	height: 90%; 
+	top: 0%;
+	height: 100%;
+	width: 100%; 
 
 	transform-style: preserve-3d; 
 
@@ -600,7 +600,7 @@ nav a:hover
 	position: absolute; 
 	height: 100%; 
 	border-left:1px solid white;
-	background: rgba(26,26,26,0.75);  
+	background: rgba(26,41,26,0.75);  
 }
 
 #XPHop 
