@@ -1,13 +1,12 @@
-$( document ).ready(function() {
+$( document ).ready(function() {	
 
 	/* Window Events */
 	$(window).resize(function() {
 		foldMenu();
 	});
 
-	/* Animations */
-	welcome();
-	unveilCubeStyle();
+	welcome();	
+	timeline();
 
  	$(window).bind('scroll', function(e) {
  		parallaxpourri();
@@ -75,15 +74,19 @@ function foldMenu() {
 }
 
 function timeline() {
-	
+	/* Need to be called on resize events */
+
+	/* Cube Setup */
+	cubeIt();
+
+ 	/* Slider Setup */
+ 	cubeSlider();
 }
 
-function unveilCubeStyle() {
-	
-	/* Cube Setup */
-	var w = $('#XPHop').width();
+function cubeIt() {
 
-	 
+	var w = $('#XPHop').width();
+	
 	$('#XPHop').css('transform','rotateY(-90deg) translateX('+-w+'px) ');
 
 	/* Cube Rotation Trigger */
@@ -92,7 +95,7 @@ function unveilCubeStyle() {
 		$('.togglecursor').toggleClass("toggleleft");
 		$('.togglecursor').toggleClass("toggleright");
 
-		/* Behaviour */
+		/* Behaviour Save*/
 		if( $('.togglecursor').hasClass("toggleright"))
 		{
 			$('#XPCubeContainer').css('transform','translateX('+w/2+'px) rotateY(90deg)');
@@ -101,15 +104,24 @@ function unveilCubeStyle() {
 		{
 			$('#XPCubeContainer').css('transform','initial');
 		}
+ 	}); 
+}
+ 
+function cubeSlider() {
+	/* Dynamic slide height */
+	var h = $('#xpslider').height();
+ 	$('.slide').css('height', h + "px");
 
+ 	/*	w/e */
+ 	$("#xpslider").on("scroll", function() {
+	//	$(".slide").css({"background-position": $(this).scrollTop()/6-100+ "px 0"});  
+	});
 
- 	}); 	 
 }
 
- 
 function parallaxpourri() {
 	var scrolledY = $(window).scrollTop();
-	
+	/*
 	$('#HeroBack').css('background-position','center -'+((scrolledY*0.2))+'px');
 	$('#OverBack').css('background-position','center -'+((scrolledY*0.8))+'px'); 
 
