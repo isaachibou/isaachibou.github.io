@@ -436,10 +436,10 @@ nav a:hover
 	border-bottom: 1px solid #AAA; 
 	cursor: pointer;
 	
-	-webkit-transition: font-size .2s ease-in-out; 
-	-moz-transition: font-size .2s ease-in-out; 
-	-o-transition: font-size .2s ease-in-out; 
-	transition: font-size .2s ease-in-out;
+	-webkit-transition: font-size .5s ease-in-out; 
+	-moz-transition: font-size .5s ease-in-out; 
+	-o-transition: font-size .5s ease-in-out; 
+	transition: font-size .5s ease-in-out;
 	
 	-webkit-transition: width .5s ease-in-out; 
 	-moz-transition: width .5s ease-in-out; 
@@ -456,10 +456,10 @@ nav a:hover
 	border-bottom: 1px solid #FFF;  
 	font-family: 'Oswald','Nixie One', Serif;
 		   	   
-	-webkit-transition: all .2s ease-in-out; 
-	-moz-transition: all .2s ease-in-out; 
-	-o-transition: all .2s ease-in-out; 
-	transition: all .2s ease-in-out; 
+	-webkit-transition: all .5s ease-in-out; 
+	-moz-transition: all .5s ease-in-out; 
+	-o-transition: all .5s ease-in-out; 
+	transition: all .5s ease-in-out; 
 }
 
 .datyear 
@@ -481,11 +481,12 @@ nav a:hover
 /******************* Months *******************/
 #Months 
 { 
-	padding: 0 0 0 1%;
+	padding: 0 0 0 0.75%;
 	position: absolute; min-width: 260px; 
 	left: 1%; 
 	top: 15%; 
 	height: auto; 
+	width: 18%;
 	list-style: none; border-left: 1px solid #FFF; 
 	font-family:  'Nixie One', Serif; 
 	
@@ -499,7 +500,7 @@ nav a:hover
 {  
 	padding: 0 0 0 1%;
 	text-align: left; color: #FFF; 
-	font-size: 2rem; 
+	font-size: 1.8rem; 
 	cursor: pointer; 
 	width: 70%;
 	
@@ -512,7 +513,7 @@ nav a:hover
 .pertinentmonth 
 { 
 	font-family: 'Jura','Nixie One', Serif; 
-	font-size: 3rem; 
+	font-size: 2.3rem; 
 	color: #FFF; 
 	border-right: 1px solid white;
 	
@@ -525,8 +526,9 @@ nav a:hover
 .pertinentmonth:hover 
 { 
 	font-family: 'Jura','Nixie One', Serif; 
-	font-size: 4rem;
-	color: #FFF; 
+	font-weight: bold;
+	font-size: 2.8rem;
+	color: #369; 
 	
 	-webkit-transition: all .2s ease-in-out; 
 	-moz-transition: all .2s ease-in-out; 
@@ -537,7 +539,8 @@ nav a:hover
 .datmonth 
 { 
 	font-weight: bold; font-family: 'Jura','Nixie One', Serif; 
-	font-size: 4rem; color: #336699; width: 88%;   
+	font-size: 2.9rem; color: #336699; 
+	width: 80%;   
 	border-right: 1px solid white;
 
 	-webkit-transition: all .2s ease-in-out; 
@@ -545,7 +548,7 @@ nav a:hover
 	-o-transition: all .2s ease-in-out; 
 	transition: all .2s ease-in-out; 
 }
-
+/*
 .dismonth 
 { 
 	font-family: 'Jura','Nixie One', Serif; 
@@ -571,7 +574,7 @@ nav a:hover
 	-o-transition: all .2s ease-in-out; 
 	transition: all .2s ease-in-out; 
 }
-
+*/
 #Pane { padding: 0; position: absolute;   height:100%; }
 
 #XPCubeContainer 
@@ -666,7 +669,7 @@ nav a:hover
 {
 	padding: 0;
 	position: absolute;
-	height: 70%;
+	height: 60%;
 	overflow-y: scroll;
 }
 
@@ -696,14 +699,16 @@ nav a:hover
 	background: #336699;
 }
 
+.slide 
+{
+	position: relative;
+}
 
- 
-
-#slide0 { background: url("../images/jpg/places/besac.jpg") center 0 no-repeat; background-size: 100% 100%; }
-#slide1 { background: url("../images/jpg/places/utbmtc.jpg") center 0 no-repeat; background-size: 100% 100%;}
-#slide2 { background: url("../images/jpg/places/belfort.jpg") center 0 no-repeat; background-size: 100% 100%;}
-#slide3 { background: url("../images/jpg/places/nyc.jpg") center 0 no-repeat; background-size: 100% 100%;}
-#slide4 { background: url("../images/jpg/places/gipipo.jpg") center 0 no-repeat; background-size: 100% 100%;}
+#slide0 { background: url("../images/jpg/places/besac.jpg") center 0 no-repeat; background-size: cover; }
+#slide1 { background: url("../images/jpg/places/utbmtc.jpg") center 0 no-repeat; background-size: cover;}
+#slide2 { background: url("../images/jpg/places/belfort.jpg") center 0 no-repeat; background-size: cover; }
+#slide3 { background: url("../images/jpg/places/nyc.jpg") center 0 no-repeat; background-size: cover; }
+#slide4 { background: url("../images/jpg/places/gipipo.jpg") center 0 no-repeat; background-size: cover;}
 
 
 /******************************************************************************************************************************************************************************

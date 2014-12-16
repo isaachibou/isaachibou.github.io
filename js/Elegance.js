@@ -11,6 +11,8 @@ $( document ).ready(function() {
  	$(window).bind('scroll', function(e) {
  		parallaxpourri();
  	});
+
+ 	pertinentMonths("2010");
  	
 });
 
@@ -76,11 +78,60 @@ function foldMenu() {
 function timeline() {
 	/* Need to be called on resize events */
 
+	/* Calendar interactions */
+	calendar();
+
 	/* Cube Setup */
 	cubeIt();
 
  	/* Slider Setup */
  	cubeSlider();
+}
+
+function calendar () {	
+	/* On year selection */
+	$(".year").click(function() {
+		/* Unselect all */
+		$(".year").each(function() {
+	    	if($(this).hasClass("datyear"))
+	    	{
+	    		$(this).toggleClass("datyear");
+	    	}
+		});
+		/* Highlight chosen */
+		$(this).toggleClass("datyear");
+	});
+
+	/* On month selection */
+	$(".month").click(function() {
+		/* Is this month clickable ? */
+		if($(this).hasClass("pertinentmonth"))
+		{
+			/* Unselect all */
+			$(".month").each(function() {
+				if($(this).hasClass("datmonth"))
+				{
+					$(this).toggleClass("datmonth");
+				}
+			});
+			/* Highlight chosen */
+			$(this).toggleClass("pertinentmonth");
+			$(this).toggleClass("datmonth");
+		}
+	});
+
+}
+
+function pertinentMonths(id) {
+	$("#HeroTimeline #xpnav a").each(function() {
+		if( $(this).attr('id').substring(0,4) == id ) {
+			var pert = $(this).attr("id").substring(4,7);
+			if( !($('#' + pert).hasClass('pertinentmonth')) )
+			{
+				$('#' + pert).toggleClass('pertinentmonth');
+			}
+		}
+	});
 }
 
 function cubeIt() {
@@ -105,18 +156,21 @@ function cubeIt() {
 			$('#XPCubeContainer').css('transform','initial');
 		}
  	}); 
-}
+}	
  
 function cubeSlider() {
 	/* Dynamic slide height */
 	var h = $('#xpslider').height();
  	$('.slide').css('height', h + "px");
+ 	//$('.slide').css('background-position','0 '+ -50 +'px');
 
- 	/*	w/e */
- 	$("#xpslider").on("scroll", function() {
-	//	$(".slide").css({"background-position": $(this).scrollTop()/6-100+ "px 0"});  
-	});
-
+ 	$("#xpslider").scroll(function() { 
+ 		var scrolledY = $("#xpslider").scrollTop();
+ 		var by = scrolledY / 6 - 100;
+ 		$('#slide0').css('background-position','0 '+ by +'px');
+ 		$('#slide1').css('background-position','0 '+ by+'px'); 
+ 		console.log(scrolledY/6 -100);
+ 	});
 }
 
 function parallaxpourri() {

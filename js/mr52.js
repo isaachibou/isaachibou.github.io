@@ -12,8 +12,6 @@ $( document ).ready(function() {
 		handleMenu();
 	}); 
 
-
-
 });
 
  
