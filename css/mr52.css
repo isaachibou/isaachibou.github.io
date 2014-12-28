@@ -135,7 +135,7 @@ nav a:hover { color: #259393; text-decoration: none;}
 /******************************************************************************************************************************************************************************
 * FRISE
 ******************************************************************************************************************************************************************************/
-#Frise { position: relative; padding: 0; margin: 0; width: 100vw; max-width: 100%; height: 400vh; border: 1px solid black; background: #E6E6E6 center 0 no-repeat fixed; background-size: cover; }
+#Frise { position: relative; padding: 0; margin: 0; width: 100vw; max-width: 100%; height: 450vh; border: 1px solid black; background: #E6E6E6 center 0 no-repeat fixed; background-size: cover; }
 
 
 /* ================ The Timeline ================ */
