@@ -1,0 +1,61 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en" xmlns="http://www.w3.org/2000/svg">
+	<head>
+
+	    <meta charset="utf-8">
+	    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	    <meta name="description" content="">
+	    <meta name="author" content="">
+	    <link href='http://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
+
+	    <link href="http://netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css" rel="stylesheet"> 
+	    <link rel="stylesheet" type="text/css" href="css/style.css" />
+	    
+	    <title>Exercices</title>
+
+	</head>
+
+	<body onload="Load()">
+		<h1>Exercices Isaac CHIBOUB 2015</h1>
+		<script type="text/javascript" src="js/exercices.js"></script>	
+
+		<div id="exo1">
+			<h2>Exo 1: Fibonacci Sequence</h2>
+			<div id="numbers">
+
+			</div>
+			<button type="button" class="btn btn-large" style="margin-top:10px;" onclick="nextSeq()">
+			<p id="fibs">
+			</p> 
+				<span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+				Compute the next 100s
+			</button>
+		</div>
+
+		<div id="exo2">
+			<h2>Exo 2: Card Slider</h2>
+			<div id="automat">
+				<input id="auto" type="checkbox" onchange="AutomaticMode()"> 
+				<span>Automatic mode</span>
+			</div>
+			<div class="slider">
+				<div id="prevbtn" onclick="Prev()">
+					<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+				</div>
+				<div id="main">
+	 				<div id="c1" class="card ghost" style="background-color: #E0B880"> 1 </div>
+	 				<div id="c2" class="card left" style="background-color: #60A0A0"> 2  </div>
+	 				<div id="c3" class="card" style="background-color: #FFA070"> 3 </div>
+	 				<div id="c4" class="card right" style="background-color: #308850"> 4 </div>
+				</div>
+				<div id="nextbtn" onclick="Next()">
+					<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+				</div>
+			</div>
+		</div>
+	</body> 
+</html>
